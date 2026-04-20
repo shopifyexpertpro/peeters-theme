@@ -46,6 +46,15 @@ assign shadow = section.settings.shadow
 {% endstyle %}
 
 <section class="color-{{ section.settings.color_scheme }} gradient">
+
+    <div class="hero_content only-phone">
+        <div class="hero_title">
+            <h2 class="title_{{size}}">{{ title }}</h2>
+             <p>{{ content }}</p>
+        </div>
+    </div>
+
+
     <div class="herosliderLayout" >
         <div class="swiper heroSlider">
             
@@ -113,6 +122,10 @@ assign shadow = section.settings.shadow
         </a>
     </div>
 {% endif %}
+
+<div class="hero_content only-phone">
+         {%  render 'hero-banner-search' , placeholder: placeholder, search_btn:search_btn %}
+    </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

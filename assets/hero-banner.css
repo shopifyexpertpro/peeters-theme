@@ -196,3 +196,51 @@ position: relative;
     letter-spacing: 0%;
 
 }
+
+@media(max-width:767px){
+    .herosliderLayout {
+    width: calc( 100% - 15px );
+}
+    .hero_content {
+        padding:25px;
+
+    }
+    .hero-banner-search form {
+    flex-direction: column;
+      height: auto;
+      padding: 30px;
+      border-radius: 25px;
+      gap:25px;
+    
+}
+    .hero-banner-search {
+    position: relative;
+    z-index: 1;
+}
+.hero-banner-search form .search-icon {
+    display: none;
+}
+.hero-banner-search form input {
+     font-size: 20px;
+    text-align: center;
+ }
+.hero-banner-search form button {
+    background: rgb(var(--color-button));
+    color: rgb(var(--color-foreground));
+    font-size: 20px;
+    text-align: center;
+    
+}
+.hero-banner-search form input::placeholder {
+  text-align: center;
+}
+.hero_banner::after {
+height: 45%;;
+}
+
+.appoinment {
+padding-right: 15px;
+padding-bottom:0px;
+transform: translateY(-70px);
+}
+}
