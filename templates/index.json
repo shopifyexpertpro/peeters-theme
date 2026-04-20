@@ -51,8 +51,8 @@
         "appointment_text": "Make an appointment!",
         "appointment_link": "shopify://collections/all",
         "color_scheme": "",
-        "appointment_bg": "#3F7280",
-        "slide_width": "12400px",
+        "appointment_bg": "#3f7280",
+        "slide_width": "1400px",
         "slide_radius": 400,
         "slide_height": 0.5
       }
