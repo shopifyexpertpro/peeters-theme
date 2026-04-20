@@ -24,6 +24,7 @@ assign slide_height = section.settings.slide_height
 assign appointment_text = section.settings.appointment_text
 assign appointment_link = section.settings.appointment_link
 assign appointment_bg = section.settings.appointment_bg
+assign shadow = section.settings.shadow
 
 
 
@@ -37,7 +38,10 @@ assign appointment_bg = section.settings.appointment_bg
     --slider-ratio:{{ slide_height }};
    --header_max_width:{{ header_max_width }};
    --appointment_bg:{{ appointment_bg }};
-
+   
+   {% if shadow == true %}
+   --box-shadow:114px 0 150px #52b0991c;
+    {% endif %}
 }
 {% endstyle %}
 
@@ -71,7 +75,7 @@ assign appointment_bg = section.settings.appointment_bg
         </div>
     </div>
 
-    <div class="hero-banner-content">
+    <div class="hero-banner-content only-desktop">
         <div class="page-width hero_content">
             <div class="hero_title">
                 <h2 class="title_{{size}}">{{ title }}</h2>
@@ -236,6 +240,13 @@ assign appointment_bg = section.settings.appointment_bg
             "id": "appointment_bg",
             "label": "Appointment Bg Color",
             "default": "#3F7280"
+            },
+            {
+                "type": "checkbox",
+                "id": "shadow",
+                "label": "background Shadow",
+                "default":true
+
             },
             {
                 "type": "text",
