@@ -148,8 +148,8 @@ border:0;
   border:0;
 }
 .hero-banner-search form button {
-    background: rgb(var(--color-background));
-    background: var(--gradient-background);
+    /* background: rgb(var(--color-background));
+    background: var(--gradient-background); */
     color: rgb(var(--color-foreground));
     font-size: 20px;
     font-weight: 500;
@@ -159,6 +159,7 @@ border:0;
     border-radius: 100px;
     flex-shrink: 0;
     border: 0;
+    overflow: hidden;
 }
 
 .appoinment {
