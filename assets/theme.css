@@ -1,0 +1,50 @@
+:root {
+    --Nohemi: "Nohemi";
+}
+
+* {
+    font-family: var(--Nohemi);
+}
+*:focus-visible {
+    outline:none;
+    outline-offset:none;
+    box-shadow:none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 100%;
+    margin:0;
+    letter-spacing: 0%;
+}
+strong {
+    color: rgba(var(--color-button), var(--alpha-button-background));
+    font-weight: 600;
+}
+p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 5%;
+}
+.title_small {
+font-size:24px;
+}
+
+.title_medium {
+font-size:32px;
+}
+
+.title_large {
+font-size:44px;
+}
+
+.title_extralarge {
+font-size:54px;
+}
+
+.title_extraextralarge {
+font-size:85px;
+}
+
+
+

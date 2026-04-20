@@ -1,0 +1,286 @@
+{{ 'hero-banner.css' | asset_url |  stylesheet_tag }}
+
+
+{% liquid
+
+assign title = section.settings.title
+assign size  = section.settings.size
+assign content = section.settings.content
+assign header_max_width = section.settings.header_max_width
+
+
+assign icon_01 = section.settings.icon_01
+assign feature_01 = section.settings.featured_01
+assign icon_02 = section.settings.icon_02
+assign feature_02 = section.settings.featured_02
+
+assign placeholder = section.settings.placeholder_text
+assign search_btn = section.settings.search_btn
+
+assign slide_width = section.settings.slide_width
+assign slide_radius = section.settings.slide_radius
+assign slide_height = section.settings.slide_height
+
+assign appointment_text = section.settings.appointment_text
+assign appointment_link = section.settings.appointment_link
+assign appointment_bg = section.settings.appointment_bg
+
+
+
+
+%}
+
+{%  style  %} 
+.hero_banner {
+    --slider-width:{{ slide_width }};
+    --slider-radius:{{ slide_radius }}px;
+    --slider-ratio:{{ slide_height }};
+   --header_max_width:{{ header_max_width }};
+   --appointment_bg:{{ appointment_bg }};
+
+}
+{% endstyle %}
+
+<section class="color-{{ section.settings.color_scheme }} gradient">
+    <div class="herosliderLayout" >
+        <div class="swiper heroSlider">
+            
+        <div class="swiper-wrapper">
+        
+        {% for block in section.blocks %}
+                    {%  liquid
+                        assign media = block.settings.media 
+                    %} 
+                    <div class="swiper-slide slide">
+                    {% if media %}
+                    
+                        {{ media
+                            | image_url: width:'1200px'
+                            | image_tag:
+                            class: 'slide_image',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                        }}
+                    {% else %}
+                        {{ 'hero-apparel-1' | placeholder_svg_tag: 'slide_image' }}
+                    {% endif %}
+                    </div>
+                {% endfor %}
+                </div>
+            
+        </div>
+    </div>
+
+    <div class="hero-banner-content">
+        <div class="page-width hero_content">
+            <div class="hero_title">
+                <h2 class="title_{{size}}">{{ title }}</h2>
+                 <p>{{ content }}</p>
+            </div>
+            <div class="hero_search">
+                <ul>
+                 {% if feature_01 != blank %}
+                <li>
+                    <div>
+                       {% if icon_01 %} {{ icon_01  |  image_url: width: '100px'  |  image_tag}} {% endif %}
+                        <span>{{ feature_01 }}</span>
+                    </div>
+                </li>
+                {% endif %}
+                {% if feature_02 != blank %}
+                <li>
+                    <div>
+                     {% if icon_02 %}  {{ icon_02 | image_url: width: '100px' |  image_tag }} {% endif %}
+                        <span>{{ feature_02 }}</span>
+                    </div>
+                </li>
+                {% endif %}
+            </ul>
+            {%  render 'hero-banner-search' , placeholder: placeholder, search_btn:search_btn %}
+           
+            </div>
+        </div>
+    </div>
+{% if appointment_link != blank %}
+    <div class="appoinment">
+        <a class="appontment_btn" href="{{ appointment_link }}">
+            {%  render 'button-icon' %}
+             <span>{{ appointment_text }}</span>
+        </a>
+    </div>
+{% endif %}
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".heroSlider", {
+         spaceBetween: 30,
+      centeredSlides: true,
+      effect:"fade",
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+    });
+</script>
+
+
+
+{%  schema  %} 
+    {
+        "name": "Hero Banner",
+        "class": "hero_banner",
+        "tag": "section",
+        "disabled_on": {
+            "groups": ["header","footer","aside"]
+        },
+        "settings": [
+            {
+                "type": "inline_richtext",
+                "id": "title",
+                "label": "Heading Here",
+                "default": "Wij houden van fietsen"
+            },
+            {
+                "type": "select",
+                "id": "size",
+                "label": "Title Size",
+                "default":"large",
+                "options": [
+                    {"label": "Small", "value": "small"},
+                    {"label": "Medium", "value": "medium"},
+                    {"label": "Large", "value": "large"},
+                    {"label": "Extra Large", "value": "extralarge"},
+                    {"label": "Extra Extra Large", "value": "extraextralarge"}
+                ]
+            },
+            {
+                "type": "text",
+                "id": "header_max_width",
+                "label": "Header Max Width",
+                "default":"450px"
+            },
+            {
+                "type": "textarea",
+                "id": "content",
+                "label": "Short Text Here",
+                "default": "Ultiem fietsplezier door middel van optimale service, kwaliteit en vakmanschap. Dat staat bij ons voorop!"
+            },
+            {
+                "type": "header",
+                "content": "Freature"
+            },
+            {
+                "type": "image_picker",
+                "id": "icon_01",
+                "label": "Icon 01 Here"
+            },
+            {
+                "type": "text",
+                "id": "featured_01",
+                "label": "Feature One",
+                "default": "Plan een advies gesprek"
+            },
+              {
+                "type": "image_picker",
+                "id": "icon_02",
+                "label": "Icon 02 Here"
+            },
+            {
+                "type": "text",
+                "id": "featured_02",
+                "label": "Featured Two",
+                "default": "Plan een service gesprek"
+            },
+              {
+                "type": "text",
+                "id": "placeholder_text",
+                "label": "Search Placeholder Text",
+                "default": "Waar ben je naar op zoek?"
+            },
+                {
+                "type": "text",
+                "id": "search_btn",
+                "label": "Button Text",
+                "default": "ZOEKEN"
+            },
+            {
+                "type": "header",
+                "content": "Appointment"
+
+            },
+            {
+                "type": "text",
+                "id": "appointment_text",
+                "label": "Appointment Text",
+                "default": "Make an appointment!"
+            },
+             {
+                "type": "url",
+                "id": "appointment_link",
+                "label": "Appointment Link"
+            },
+            {
+                "type": "header",
+                "content": "Section Style"
+
+            },
+              {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Section Color",
+            "default": "scheme-5"
+            },
+               {
+            "type": "color",
+            "id": "appointment_bg",
+            "label": "Appointment Bg Color",
+            "default": "#3F7280"
+            },
+            {
+                "type": "text",
+                "id": "slide_width",
+                "label": "Slide Width",
+                "default": "1200px"
+            },
+            {
+                "type": "range",
+                "id": "slide_radius",
+                "label": "Slide Radious",
+                "min":0 ,
+                "max": 400,
+                "step": 5,
+                "default":100,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "slide_height",
+                "label": "Slide Height",
+                "min":0 ,
+                "max": 1,
+                "step": 0.1,
+                "default":0.5
+            }
+        ],
+        "blocks": [
+            {
+                "type": "media",
+                "name": "Media",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "media",
+                        "label": "Slider Image"
+                    }
+                ]
+            }
+        ],
+        
+        "presets": [
+            {
+                "name": "Hero Banner"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "Nohemi";
+  src: url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Light.woff?v=1775287328") format("woff"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Light.otf?v=1775287329") format("opentype"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Light.ttf?v=1775287328") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Regular.woff?v=1775287328") format("woff"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Regular.otf?v=1775287329") format("opentype"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Regular.ttf?v=1775287328") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Medium.woff?v=1775287329") format("woff"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Medium.otf?v=1775287329") format("opentype"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Medium.ttf?v=1775287329") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi";
+  src: url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-SemiBold.woff?v=1775287328") format("woff"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-SemiBold.otf?v=1775287328") format("opentype"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-SemiBold.ttf?v=1775287328") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nohemi";
+  src: url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Bold.woff?v=1775287328") format("woff"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Bold.otf?v=1775287328") format("opentype"),
+       url("https://cdn.shopify.com/s/files/1/0987/6566/8665/files/._Nohemi-Bold.ttf?v=1775287328") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Nohemi";
+  src: url("") format("woff"),
+       url("") format("opentype"),
+       url("") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+} */
