@@ -38,9 +38,9 @@
       ],
       "name": "Hero Banner",
       "settings": {
-        "title": "Wij houden van fietsen",
-        "size": "large",
-        "header_max_width": "450px",
+        "title": "Wij houden van <strong>fietsen</strong>",
+        "size": "extraextralarge",
+        "header_max_width": "455px",
         "content": "Ultiem fietsplezier door middel van optimale service, kwaliteit en vakmanschap. Dat staat bij ons voorop!",
         "icon_01": "shopify://shop_images/user-02.png",
         "featured_01": "Plan een advies gesprek",
@@ -53,7 +53,7 @@
         "color_scheme": "",
         "appointment_bg": "#3F7280",
         "slide_width": "12400px",
-        "slide_radius": 100,
+        "slide_radius": 400,
         "slide_height": 0.5
       }
     },
