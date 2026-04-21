@@ -52,6 +52,7 @@
         "appointment_link": "shopify://collections/all",
         "color_scheme": "scheme-5",
         "appointment_bg": "#3f7280",
+        "shadow": true,
         "slide_width": "1400px",
         "slide_radius": 400,
         "slide_height": 0.5
