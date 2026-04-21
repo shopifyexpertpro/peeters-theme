@@ -60,12 +60,93 @@
     },
     "scrolling_logo_kqrntT": {
       "type": "scrolling-logo",
+      "blocks": {
+        "logo_XMBAUQ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/merida-logo.svg"
+          }
+        },
+        "logo_TbUryn": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/kal.svg"
+          }
+        },
+        "logo_YTNHNx": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/lover.svg"
+          }
+        },
+        "logo_mHyFTy": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/kal_1.svg"
+          }
+        },
+        "logo_TRTxpw": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Group_323.svg"
+          }
+        },
+        "logo_JmtXYN": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/cortina-logo.svg"
+          }
+        },
+        "logo_m8H9hq": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/van-Raam-logo.svg"
+          }
+        },
+        "logo_3jmNhg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/alpina-logo_1.svg"
+          }
+        },
+        "logo_eRPjg9": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Koninklijke_Gazelle4_2.svg"
+          }
+        },
+        "logo_CfVeN6": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/urban-arrow-logo.svg"
+          }
+        },
+        "logo_9jwbjd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/loekie-vector-logo.svg"
+          }
+        }
+      },
+      "block_order": [
+        "logo_XMBAUQ",
+        "logo_TbUryn",
+        "logo_YTNHNx",
+        "logo_mHyFTy",
+        "logo_TRTxpw",
+        "logo_JmtXYN",
+        "logo_m8H9hq",
+        "logo_3jmNhg",
+        "logo_eRPjg9",
+        "logo_CfVeN6",
+        "logo_9jwbjd"
+      ],
       "name": "Scrolling Logo",
       "settings": {
         "color_scheme": "scheme-3",
         "padding_top": 20,
         "padding_bottom": 20,
-        "logo_filter": false,
+        "logo_filter": true,
         "logo_height": 60,
         "rtl": false,
         "speed": 2000,
