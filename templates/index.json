@@ -58,6 +58,24 @@
         "slide_height": 0.5
       }
     },
+    "scrolling_logo_kqrntT": {
+      "type": "scrolling-logo",
+      "name": "Scrolling Logo",
+      "settings": {
+        "color_scheme": "scheme-3",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "logo_filter": false,
+        "logo_height": 60,
+        "rtl": false,
+        "speed": 2000,
+        "loop": true,
+        "slide_in_desktop": 5,
+        "gap_in_desktop": 50,
+        "slide_in_phone": 2,
+        "gap_in_phone": 30
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -272,6 +290,7 @@
   },
   "order": [
     "hero_banner_YQMNd7",
+    "scrolling_logo_kqrntT",
     "image_banner",
     "rich_text",
     "featured_collection",
