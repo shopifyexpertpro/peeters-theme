@@ -147,11 +147,11 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "logo_filter": true,
-        "logo_height": 60,
+        "logo_height": 85,
         "rtl": false,
         "speed": 2000,
         "loop": true,
-        "slide_in_desktop": 5,
+        "slide_in_desktop": 7,
         "gap_in_desktop": 50,
         "slide_in_phone": 2,
         "gap_in_phone": 30
