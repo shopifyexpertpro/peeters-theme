@@ -1,0 +1,25 @@
+
+.scrolling-logo {
+padding: var(--padding_top) 0px var(--padding_bottom);
+}
+
+.scrolling-logo .swiper-wrapper {
+   
+    align-items: center;
+}
+.scrolling-logo .slide_logo {
+  height: var(--logo-height);
+  object-fit: contain;
+  width:stretch;
+  transition-duration: .4s;
+ 
+}
+.scrolling-logo .slide_logo:hover {
+  filter: brightness(1) invert(0);
+  opacity: 1;
+}
+
+.scrolling-logo .swiper-wrapper {
+    transition-timing-function: linear;
+    
+  }
