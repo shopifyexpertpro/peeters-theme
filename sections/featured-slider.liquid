@@ -8,7 +8,60 @@
         "name": "featured slider",
         "class": "featured-slider",
         "tag": "section",
-        "blocks": [],
+        "blocks": [{
+            "type": "image-slider",
+            "name":"Image Slider",
+            "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "media",
+                        "label": "Add Slider Image"
+                    },
+                     {
+                        "type": "image_picker",
+                        "id": "media_phone",
+                        "label": "Slider Image For Mobile"
+                    },
+                    {
+                        "type": "text",
+                         "id": "sub_title",
+                        "label": "Sub Heading",
+                        "default":"VACATURE"
+                    },
+                     {
+                        "type": "text",
+                         "id": "title",
+                        "label": "Title Here",
+                        "default":"Wij zoeken een ervaren fietsmonteur!"
+                    },
+                    {
+                        "type": "textarea",
+                         "id": "content",
+                        "label": "Content",
+                        "default":"Heb jij net zo’n passie voor fietsen als wij en heb je ervaring in het onderhouden, repareren en afstellen van diverse fietsen? Bekijk dan onze vacature en wie weet tot snel!"
+                    },
+                     {
+                        "type": "text",
+                         "id": "btn_text",
+                        "label": "Button Text",
+                        "default":"BEKIJK VACATURE"
+                    },
+                     {
+                        "type": "url",
+                         "id": "btn_url",
+                        "label": "Button Link"
+                    },
+                        {
+                    "type": "color_scheme",
+                    "id": "color_scheme",
+                    "label": "settings.color_scheme",
+                    "default": "scheme-5"
+            },
+
+                    
+                
+            ]
+        }],
         "settings": [
             {
                 "type": "header",
