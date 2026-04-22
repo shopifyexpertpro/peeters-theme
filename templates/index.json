@@ -204,6 +204,16 @@
         "show_text_below": false
       }
     },
+    "featured_slider_43YLkQ": {
+      "type": "featured-slider",
+      "name": "featured slider",
+      "settings": {
+        "layout_max_width": "1603px",
+        "color_scheme": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -373,6 +383,7 @@
     "hero_banner_YQMNd7",
     "scrolling_logo_kqrntT",
     "image_banner",
+    "featured_slider_43YLkQ",
     "rich_text",
     "featured_collection",
     "collage",
