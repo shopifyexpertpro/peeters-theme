@@ -157,6 +157,34 @@
         "gap_in_phone": 30
       }
     },
+    "featured_slider_KLnPY4": {
+      "type": "featured-slider",
+      "blocks": {
+        "image_slider_k7wi3f": {
+          "type": "image-slider",
+          "settings": {
+            "media": "shopify://shop_images/Mask_group_2.png",
+            "media_phone": "shopify://shop_images/Mask_group_1.png",
+            "sub_title": "VACATURE",
+            "title": "Wij zoeken een ervaren fietsmonteur!",
+            "content": "Heb jij net zo’n passie voor fietsen als wij en heb je ervaring in het onderhouden, repareren en afstellen van diverse fietsen? Bekijk dan onze vacature en wie weet tot snel!",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "shopify://collections/all",
+            "color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": [
+        "image_slider_k7wi3f"
+      ],
+      "name": "featured slider",
+      "settings": {
+        "layout_max_width": "",
+        "color_scheme": "scheme-3",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -382,6 +410,7 @@
   "order": [
     "hero_banner_YQMNd7",
     "scrolling_logo_kqrntT",
+    "featured_slider_KLnPY4",
     "image_banner",
     "featured_slider_43YLkQ",
     "rich_text",
