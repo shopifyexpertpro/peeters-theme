@@ -19,6 +19,7 @@ font-size: 25px;
 line-height: 90%;
 letter-spacing: 0%;
 margin-bottom: 30px;
+color: rgba(var(--color-button), var(--alpha-button-background));
 
 }
 .featured-slide h2 {

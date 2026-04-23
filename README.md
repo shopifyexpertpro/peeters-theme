@@ -14,3 +14,7 @@ git add .
 git commit -m "update theme new"
 git pull origin main --rebase
 git push origin main
+
+git add .
+git commit -m "featured slider"
+git push -u origin main
