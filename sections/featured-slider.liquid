@@ -3,6 +3,24 @@
 
 {%  render 'featured-slider' %} 
 
+
+<script>
+    var swiper = new Swiper(".{{section.id}}", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        speed:5000,
+        loop:true,
+        autoplay:{
+            delay:0
+        },
+        freeMode: true,
+        
+    
+});
+
+</script>
+
+
 {%  schema  %} 
     {
         "name": "featured slider",
