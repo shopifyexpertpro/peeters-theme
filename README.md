@@ -18,5 +18,5 @@ git push origin main
 
 
 git add .
-git commit -m "featured slider"
+git commit -m "featured slider update"
 git push -u origin main

@@ -48,8 +48,40 @@
                 {% endfor %}
                     
             </div>
+            <div class="swiper-slider-control">
+                <div class="swiper-button-prev {{ section.id }}_prev"></div>
+                 <div class="swiper-pagination {{ section.id }}_pagination "></div>
+                
+                <div class="swiper-button-next {{ section.id }}_next"></div>
+            </div>
+            
         </div>
 
 
     </div>
 </section>
+
+<script>
+    var swiper = new Swiper(".{{section.id}}", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        speed:2000,
+        effect: "fade",
+        loop:true,
+        // autoplay:{
+        //     delay:0
+        // },
+        freeMode: true,
+        navigation: {
+        nextEl: ".{{ section.id }}_next",
+        prevEl: ".{{ section.id }}_prev",
+      },
+      pagination: {
+        el: ".{{ section.id }}_pagination",
+        clickable: true,
+      },
+        
+    
+});
+
+</script>

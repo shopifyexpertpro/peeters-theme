@@ -59,3 +59,25 @@ height: 100%;
 z-index:0;
 
 } 
+
+.featured-slider .swiper-slider-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 50px;
+}
+.featured-slider .swiper-pagination {
+    width: auto;
+}
+.featured-slider .swiper-slider-control .swiper-button-next {
+    position: relative;
+    margin-top: 0 !important;
+
+}
+
+.featured-slider .swiper-slider-control .swiper-button-prev {
+position: relative;
+margin-top: 0 !important;
+}
+
