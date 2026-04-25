@@ -2,7 +2,9 @@
 
 <div class="swiper-slide">
     <div class="featured-image-slider featured-slide color-{{ color_scheme }} gradient" 
-    style="background-image:url({{ media |  image_url: width:'1000' }})">
+    style="background-image:url({{ media |  image_url: width:'1000' }});
+    --title_max_width:{{ title_max_width }}px;
+    --content_max_width:{{ content_max_width }}px;">
             <div class="featured-mobile-image only-phone">
             {% if media_phone %}
                         
