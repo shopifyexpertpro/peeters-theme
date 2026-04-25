@@ -55,12 +55,67 @@
                          "id": "btn_url",
                         "label": "Button Link"
                     },
-                        {
+                    {
+                        "type": "checkbox",
+                        "id": "icons",
+                        "label": "Add Images",
+                        "default":false
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_01",
+                        "label": "Add ICON 01",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_02",
+                        "label": "Add ICON 02",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_03",
+                        "label": "Add ICON 03",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_04",
+                        "label": "Add ICON 04",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_05",
+                        "label": "Add ICON 05",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_06",
+                        "label": "Add ICON 06",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon_07",
+                        "label": "Add ICON 07",
+                        "visible_if": "{{ block.settings.icons }}"
+                    },
+                    {
+                        "type": "text",
+                        "id":"bottom_text",
+                        "label": "*Short Text",
+                        "default":"*Zolang de voorraad strekt"
+                    },             
+                 
+                    {
                     "type": "color_scheme",
                     "id": "color_scheme",
                     "label": "settings.color_scheme",
                     "default": "scheme-5"
-            },
+                     }
 
                     
                 

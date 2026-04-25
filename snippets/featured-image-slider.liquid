@@ -21,9 +21,115 @@
                 {%  unless sub_title == blank %} <h5>{{ sub_title }}</h5>  {% endunless %} 
                 {%  unless title == blank   %} <h2>{{ title }}</h2>  {% endunless %}
                 {%  unless content == blank  %} <p>{{ content }}</p>  {% endunless %} 
+                
+
+                {%  unless icons == blank  %} 
+                <div class="icons">
+                    {% if icon_01 %}
+                        
+                        {{ icon_01
+                            | image_url: width:'60px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                           {% if icon_02 %}
+                            {%  render 'icon-plus' %} 
+                        {% endif %}
+                    {% endif %}
+                    {% if icon_02 %}
+                        
+                        {{ icon_02
+                            | image_url: width:'60px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                             {% if icon_03 %}
+                            {%  render 'icon-plus' %} 
+                        {% endif %}
+                    {% endif %}
+                    {% if icon_03 %}
+                        
+                        {{ icon_03
+                            | image_url: width:'60px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                            {% if icon_04 %}
+                            {%  render 'icon-plus' %} 
+                        {% endif %}
+                    {% endif %}
+                    {% if icon_05 %}
+                        
+                        {{ icon_04
+                            | image_url: width:'60px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                            {% if icon_05 %}
+                            {%  render 'icon-plus' %} 
+                            {% endif %}
+                    {% endif %}
+                    {% if icon_05 %}
+                        
+                        {{ icon_05
+                            | image_url: width:'60px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                             {% if icon_06 %}
+                            {%  render 'icon-plus' %} 
+                            {% endif %}
+                    {% endif %}
+                    {% if icon_06 %}
+                        
+                        {{ icon_06
+                            | image_url: width:'60px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        {% if icon_07 %}
+                            {%  render 'icon-plus' %} 
+                        {% endif %}
+                    {% endif %}
+                    {% if icon_07 %}
+                        
+                        {{ icon_07
+                            | image_url: width:'40px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                           
+                    {% endif %}
+                </div>
+
+               {% endunless %} 
+
                 {%  unless btn_url == blank  %} 
                     <a href="{{  btn_url }}" class="btn" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
-                {% endunless %} 
+                {% endunless %}
+
+                {%  unless bottom_text == blank  %} <p>{{ bottom_text }}</p>  {% endunless %} 
+
 
             </div>
     </div>

@@ -66,6 +66,7 @@ font-size:85px;
 .btn {
 position: relative;
 background-color: transparent;
+display: inline-block;
 
 }
 .btn svg {
