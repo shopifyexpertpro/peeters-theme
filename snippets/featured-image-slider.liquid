@@ -132,6 +132,35 @@
 
 
             </div>
+            {%  unless badge == blank  %} 
+            <div class="featured_badge"
+            style="
+                --badge_width: {{badge_width}}px;
+                --badge_width_phone: {{badge_width_phone}}px;
+                --vertical: {{vertical}}%;
+                --horizontal: {{horizontal}}%;
+                --vertical_phone: {{ vertical_phone}}p%;
+                --horizontal_phone: {{horizontal_phone}}%;                     
+                                    
+                 "
+            >
+                {% if badge_image %}
+                        
+                        {{ badge_image
+                            | image_url: width:'300px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                           
+                    {% endif %}
+                {%  unless badge_text == blank  %}
+                    <h4>{{ badge_text }}</h4>
+                {% endunless %} 
+            </div>
+            {% endunless %}
     </div>
 
 

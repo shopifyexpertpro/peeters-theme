@@ -39,10 +39,30 @@
                         "default":"Wij zoeken een ervaren fietsmonteur!"
                     },
                     {
+                        "type": "range",
+                        "id": "title_max_width",
+                        "label": "Title Max width",
+                        "max": 900,
+                        "min":200,
+                        "step": 10,
+                        "default":700,
+                        "unit": "px"
+                    },
+                    {
                         "type": "textarea",
                          "id": "content",
                         "label": "Content",
                         "default":"Heb jij net zo’n passie voor fietsen als wij en heb je ervaring in het onderhouden, repareren en afstellen van diverse fietsen? Bekijk dan onze vacature en wie weet tot snel!"
+                    },
+                    {
+                        "type": "range",
+                        "id": "content_max_width",
+                        "label": "Content Max width",
+                        "max": 900,
+                        "min":200,
+                        "step": 10,
+                        "default":500,
+                        "unit": "px"
                     },
                      {
                         "type": "text",
@@ -108,7 +128,100 @@
                         "id":"bottom_text",
                         "label": "*Short Text",
                         "default":"*Zolang de voorraad strekt"
-                    },             
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "badge",
+                        "label": "Add Badge",
+                        "default":false
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "badge_image",
+                        "label": "Add Image",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                   
+                    {
+                        "type": "inline_richtext",
+                        "id": "badge_text",
+                        "label": "Badge Text",
+                        "default": "GRATIS KINDERZITJE + GOUD PAKKET T.W.V. €225",
+                        "visible_if": "{{ block.settings.badge }}"
+
+                    },
+                    {
+                        "type": "range",
+                        "id": "badge_width",
+                        "label": "Badge_width",
+                        "max": 300,
+                        "min": 0,
+                        "step": 5,
+                        "default":240,
+                        "unit": "px",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                    {
+                        "type": "range",
+                        "id": "vertical",
+                        "label": "Position Vertical",
+                        "max": 100,
+                        "min": 0,
+                        "step": 1,
+                        "default":100,
+                        "unit": "%",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                     {
+                        "type": "range",
+                        "id": "horizontal",
+                        "label": "Position Horizontal",
+                        "max": 100,
+                        "min": 0,
+                        "step": 1,
+                        "default":50,
+                        "unit": "%",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Mobile Style of Badge",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                    {
+                        "type": "range",
+                        "id": "badge_width_phone",
+                        "label": "Badge Width in Phone",
+                        "max": 300,
+                        "min": 0,
+                        "step": 5,
+                        "default":200,
+                        "unit": "px",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                    {
+                        "type": "range",
+                        "id": "vertical_phone",
+                        "label": "Position Vertical in phone",
+                        "max": 100,
+                        "min": 0,
+                        "step": 1,
+                        "default":100,
+                        "unit": "%",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+                     {
+                        "type": "range",
+                        "id": "horizontal_phone",
+                        "label": "Position Horizontal in Phone",
+                        "max": 100,
+                        "min": 0,
+                        "step": 1,
+                        "default":50,
+                        "unit": "%",
+                        "visible_if": "{{ block.settings.badge }}"
+                    },
+
                  
                     {
                     "type": "color_scheme",

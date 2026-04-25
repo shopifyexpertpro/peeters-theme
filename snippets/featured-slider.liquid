@@ -8,6 +8,9 @@
 .featured-slider {
 --padding_top:{{padding_top}}px;
 --padding_bottom:{{padding_bottom}}px;
+--title_max_width:{{ title_max_width }}px;
+--content_max_width:{{ content_max_width }}px;
+
 
 }
 
@@ -36,7 +39,9 @@
                                     media_phone:block.settings.media_phone, 
                                     sub_title:block.settings.sub_title
                                     title:block.settings.title
+                                    title_max_width:block.settings.title_max_width
                                     content:block.settings.content
+                                    content_max_width:block.settings.content_max_width
                                     btn_text:block.settings.btn_text
                                     btn_url:block.settings.btn_url,
                                     color_scheme:block.settings.color_scheme,
@@ -49,7 +54,17 @@
                                     icon_05:block.settings.icon_05,
                                     icon_06:block.settings.icon_06,
                                     icon_07:block.settings.icon_07,
-                                    bottom_text: block.settings.bottom_text
+                                    bottom_text: block.settings.bottom_text,
+
+                                    badge: block.settings.badge
+                                    badge_image: block.settings.badge_image
+                                    badge_text: block.settings.badge_text
+                                    badge_width: block.settings.badge_width
+                                    vertical: block.settings.vertical
+                                    horizontal: block.settings.horizontal
+                                    badge_width_phone: block.settings.badge_width_phone
+                                    vertical_phone: block.settings.vertical_phone
+                                    horizontal_phone: block.settings.horizontal_phone
                                     
                                 
                                 %}
