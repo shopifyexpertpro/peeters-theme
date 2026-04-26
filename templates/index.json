@@ -244,7 +244,7 @@
         "image_slider_npFByA": {
           "type": "image-slider",
           "settings": {
-            "media": "shopify://shop_images/Mask_group_9a20a83b-3197-4c93-a0ba-98b579a3f028.png",
+            "media": "shopify://shop_images/Mask_group_6.png",
             "media_phone": "shopify://shop_images/Mask_group_3_55ae67d2-e69a-42b2-8462-7b789c6dc5b9.png",
             "sub_title": "VACATURE",
             "title": "Cortina Family-fiets actie!",
@@ -260,7 +260,7 @@
             "badge_text": "GRATIS KINDERZITJE + GOUD PAKKET T.W.V. €225",
             "badge_width": 240,
             "vertical": 100,
-            "horizontal": 45,
+            "horizontal": 42,
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
