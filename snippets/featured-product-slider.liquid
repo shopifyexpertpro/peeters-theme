@@ -1,0 +1,119 @@
+{% liquid 
+
+ if product
+    
+    if media
+    assign media = media
+    else 
+    assign media = product.featured_media
+    endif
+ endif 
+
+  if product
+    if media_phone
+    assign media_phone = media_phone
+    else 
+    assign media_phone = product.featured_media
+    endif
+ endif 
+
+%}
+
+<div class="swiper-slide">
+    <div class="featured-product-slider featured-slide color-{{ color_scheme }} gradient" 
+    style="background-image:url({{ media |  image_url: width:'1000' }});
+    --title_max_width:{{ title_max_width }}px;
+    --content_max_width:{{ content_max_width }}px;">
+            <div class="featured-mobile-image only-phone">
+            {% if media_phone %}
+                        
+                {{ media_phone
+                    | image_url: width:'300px', height:'50px'
+                    | image_tag:
+                    class: 'media_phone',
+                    loading: 'lazy',
+                    fetchpriority: 'high'  
+                    }}
+                        {% else %}
+                            {{ 'hero-apparel-1' | placeholder_svg_tag: 'media_phone' }}
+            {% endif %}
+            </div>
+            <div class="featured-slide-content">
+
+                {%  unless sub_title == blank %} <h5>{{ sub_title }}</h5>  {% endunless %} 
+                
+                {% if product %}
+                    {% if title != blank %}
+                        <h2>{{ title }}</h2> 
+                    {%  else %}
+                        <h2>{{ product.title }}</h2> 
+                    {% endif %}
+                {% endif %}
+                
+                <div class="featured_product_price">
+                    <div class="slide_price">{{ product.price |  money_without_trailing_zeros }} p/st</div>
+                    <div class="slide_compate_at_price">{{ product.compare_at_price |  money_without_trailing_zeros }}</div>
+                </div>
+
+
+                {% if product %}
+                    {% if content != blank %}
+                        {{ content }} 
+                    {%  else %}
+                        {{ product.description }} 
+                    {% endif %}
+                {% endif %}
+                
+                  
+               
+              
+                
+
+               
+
+                {%  unless btn_url == blank  %} 
+                    <a href="{{  btn_url }}" class="btn" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
+                {% endunless %}
+
+                {%  unless bottom_text == blank  %} <p>{{ bottom_text }}</p>  {% endunless %} 
+
+
+            </div>
+            {%  unless badge == blank  %} 
+            <div class="featured_badge"
+            style="
+                --badge_width: {{badge_width}}px;
+                --badge_width_phone: {{badge_width_phone}}px;
+                --vertical: {{vertical}}%;
+                --horizontal: {{horizontal}}%;
+                --vertical_phone: {{ vertical_phone}}p%;
+                --horizontal_phone: {{horizontal_phone}}%;                     
+                                    
+                 "
+            >
+                {% if badge_image %}
+                        
+                        {{ badge_image
+                            | image_url: width:'300px'
+                            | image_tag:
+                            class: '',
+                            loading: 'lazy',
+                            fetchpriority: 'high'  
+                            }}
+                        
+                           
+                    {% endif %}
+                {%  unless badge_text == blank  %}
+                    <h4>{{ badge_text }}</h4>
+                {% endunless %} 
+            </div>
+            {% endunless %}
+    </div>
+
+
+</div>
+                                    
+                                   
+                                   
+                                   
+                                
