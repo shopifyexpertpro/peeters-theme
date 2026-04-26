@@ -244,11 +244,11 @@
         "image_slider_npFByA": {
           "type": "image-slider",
           "settings": {
-            "media": "shopify://shop_images/Mask_group_3.png",
-            "media_phone": "shopify://shop_images/Mask_group_1.png",
+            "media": "shopify://shop_images/Mask_group_9a20a83b-3197-4c93-a0ba-98b579a3f028.png",
+            "media_phone": "shopify://shop_images/Mask_group_3_55ae67d2-e69a-42b2-8462-7b789c6dc5b9.png",
             "sub_title": "VACATURE",
             "title": "Cortina Family-fiets actie!",
-            "title_max_width": 480,
+            "title_max_width": 460,
             "content": "Bij aankoop van een Cortina Common Family of Cortina U4 Transport Family fiets, ontvang je een GRATIS kinderzitje én een Goud servicepakket ter waarde van €225!",
             "content_max_width": 500,
             "btn_text": "BEKIJK VACATURE",
@@ -256,7 +256,7 @@
             "icons": false,
             "bottom_text": "*Zolang de voorraad strekt",
             "badge": true,
-            "badge_image": "shopify://shop_images/Ellipse_12_1.png",
+            "badge_image": "shopify://shop_images/Group_398.png",
             "badge_text": "GRATIS KINDERZITJE + GOUD PAKKET T.W.V. €225",
             "badge_width": 240,
             "vertical": 100,
