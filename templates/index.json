@@ -165,6 +165,7 @@
           "settings": {
             "product": "wielerkleding-actie-in-heel",
             "media": "shopify://shop_images/Mask_group_1_3f35d9c9-86d9-4144-8bf8-d687f71e4d6a.png",
+            "media_phone": "shopify://shop_images/Mask_group_2_e16f4930-c0e0-4b10-a4d8-3cbd0bc22ee4.png",
             "sub_title": "",
             "title": "Wij zoeken een ervaren fietsmonteur!",
             "title_max_width": 700,
@@ -181,7 +182,7 @@
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
-            "color_scheme": "scheme-5"
+            "color_scheme": "scheme-1"
           }
         },
         "image_slider_PXeC33": {
