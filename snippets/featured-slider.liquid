@@ -32,6 +32,28 @@
         
                 {% for block in section.blocks %}
                     {%  case block.type  %}
+                        {% when 'video-slider' %}
+                             {% render 'featured-video-slider'
+                                    video:block.settings.video
+                                    video_url:block.settings.video_url
+                                    media:block.settings.media
+                                    media_phone:block.settings.media_phone, 
+                                    sub_title:block.settings.sub_title
+                                    title:block.settings.title
+                                    title_max_width:block.settings.title_max_width
+                                    content:block.settings.content
+                                    content_max_width:block.settings.content_max_width
+                                    btn_text:block.settings.btn_text
+                                    btn_url:block.settings.btn_url,
+                                    color_scheme:block.settings.color_scheme,
+
+                                    bottom_text: block.settings.bottom_text,
+
+                                  
+                                    
+                                
+                                %}
+
                         {%  when 'product-slider' %}
                              {% render 'featured-product-slider'
                                     product:block.settings.product

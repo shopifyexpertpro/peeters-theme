@@ -13,6 +13,103 @@
         "class": "featured-slider",
         "tag": "section",
         "blocks": [
+              {
+            "type": "video-slider",
+            "name":"Video Slider",
+            "settings": [
+                    {
+                        "type": "video",
+                        "id": "video",
+                        "label": "Hosted Video"
+                    },
+                     {
+                        "type": "video_url",
+                        "id": "video_url",
+                        "label": "Add Video Url",
+                        "accept": ["vimeo","youtube"]
+                    },
+                    
+                    {
+                        "type": "image_picker",
+                        "id": "media",
+                        "label": "Add Slider Image"
+                    },
+                     {
+                        "type": "image_picker",
+                        "id": "media_phone",
+                        "label": "Slider Image For Mobile"
+                    },
+                    {
+                        "type": "text",
+                         "id": "sub_title",
+                        "label": "Sub Heading",
+                        "default":"VACATURE"
+                    },
+                     {
+                        "type": "text",
+                         "id": "title",
+                        "label": "Title Here",
+                        "default":"Wij zoeken een ervaren fietsmonteur!"
+                    },
+                    {
+                        "type": "range",
+                        "id": "title_max_width",
+                        "label": "Title Max width",
+                        "max": 900,
+                        "min":200,
+                        "step": 10,
+                        "default":700,
+                        "unit": "px"
+                    },
+                    {
+                        "type": "textarea",
+                         "id": "content",
+                        "label": "Content",
+                        "default":"Heb jij net zo’n passie voor fietsen als wij en heb je ervaring in het onderhouden, repareren en afstellen van diverse fietsen? Bekijk dan onze vacature en wie weet tot snel!"
+                    },
+                    {
+                        "type": "range",
+                        "id": "content_max_width",
+                        "label": "Content Max width",
+                        "max": 900,
+                        "min":200,
+                        "step": 10,
+                        "default":500,
+                        "unit": "px"
+                    },
+                     {
+                        "type": "text",
+                         "id": "btn_text",
+                        "label": "Button Text",
+                        "default":"BEKIJK VACATURE"
+                    },
+                     {
+                        "type": "url",
+                         "id": "btn_url",
+                        "label": "Button Link"
+                    },
+                    
+                                      
+                    {
+                        "type": "text",
+                        "id":"bottom_text",
+                        "label": "*Short Text",
+                        "default":"*Zolang de voorraad strekt"
+                    },
+                   
+                 
+                    {
+                    "type": "color_scheme",
+                    "id": "color_scheme",
+                    "label": "settings.color_scheme",
+                    "default": "scheme-5"
+                     }
+
+                    
+                
+            ]
+        }
+            ,
             {
                 "type": "product-slider",
                 "name": " Product Slider",
