@@ -18,15 +18,62 @@
             "name":"Video Slider",
             "settings": [
                     {
+                        "type": "select",
+                        "id": "videotype",
+                        "options": [
+                            {"value": "hosted" , "label": "Hosted"},
+                            {"value": "youtubevimeo" , "label": "Youtube or Vimeo"}
+                        ],
+                        "default":"hosted",
+                        "label": "Select Video type"
+
+                    },
+                    {
                         "type": "video",
                         "id": "video",
-                        "label": "Hosted Video"
+                        "label": "Hosted Video",
+                        "visible_if": "{{ block.settings.videotype == 'hosted' }}"
                     },
                      {
                         "type": "video_url",
                         "id": "video_url",
                         "label": "Add Video Url",
-                        "accept": ["vimeo","youtube"]
+                        "accept": ["vimeo","youtube"],
+                        "visible_if": "{{ block.settings.videotype == 'youtubevimeo' }}"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "video_option",
+                        "label": "Customize Videp Option",
+                        "default":true
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "loop",
+                        "label": "Loop",
+                        "default":true,
+                        "visible_if": "{{ block.settings.video_option == true }}"
+                    },
+                     {
+                        "type": "checkbox",
+                        "id": "autoplay",
+                        "label": "Autoplay",
+                        "default":true,
+                        "visible_if": "{{ block.settings.video_option == true }}"
+                    },
+                     {
+                        "type": "checkbox",
+                        "id": "control",
+                        "label": "Control",
+                        "default":false,
+                        "visible_if": "{{ block.settings.video_option == true }}"
+                    },
+                     {
+                        "type": "checkbox",
+                        "id": "mute",
+                        "label": "Muted",
+                        "default":true,
+                        "visible_if": "{{ block.settings.video_option == true }}"
                     },
                     
                     {

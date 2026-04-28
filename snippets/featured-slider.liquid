@@ -34,8 +34,8 @@
                     {%  case block.type  %}
                         {% when 'video-slider' %}
                              {% render 'featured-video-slider'
-                                    video:block.settings.video
-                                    video_url:block.settings.video_url
+                                   
+
                                     media:block.settings.media
                                     media_phone:block.settings.media_phone, 
                                     sub_title:block.settings.sub_title
@@ -48,6 +48,15 @@
                                     color_scheme:block.settings.color_scheme,
 
                                     bottom_text: block.settings.bottom_text,
+
+
+                                    videotype:block.settings.videotype
+                                    video:block.settings.video
+                                    video_url:block.settings.video_url
+                                    loop:block.settings.loop
+                                    autoplay:block.settings.autoplay
+                                    control:block.settings.control
+                                    mute:block.settings.mute
 
                                   
                                     
