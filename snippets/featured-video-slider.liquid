@@ -1,83 +1,80 @@
 
+{% liquid
+   if slide_style == 'mediacontent'
+    assign direction = 'column'
+
+  else if slide_style == 'contentmedia'
+    assign direction = 'column-reverse'
+
+  endif
+%}
 
 <div class="swiper-slide">
-    {% liquid 
-        if loop == true
-        assign loop_true = '&loop=1'
-        endif 
-         if autoplay == true
-        assign autoplay_true = 1
-        endif
-        if autoplay == false
-        assign autoplay_true = 0
-        endif
-     %}
-    {% if videotype == 'hosted'  %}
-            {{ video 
-            | video_tag:
-                image_size: '1100x',
-                autoplay: autoplay,
-                controls: control,
-                muted: mute,
-                loop: loop
-            }}
-    {%  elsif videotype == 'youtubevimeo' %}
-    
-        {% if video_url.type == 'youtube' %}
-            <iframe
-              src="https://www.youtube.com/embed/{{ video_url.id }}?enablejsapi=1&autoplay={{autoplay_true}}{{ loop_true }}"
-              class="js-youtube"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              title="{{ title }}"
-            ></iframe>
-         {%  elsif video_url.type == 'vimeo' %} 
-            <iframe
-              src="https://player.vimeo.com/video/{{ video_url.id  }}?autoplay={{autoplay_true}}{{ loop_true }}"
-              class="js-vimeo"
-              allow="autoplay; encrypted-media"
-              allowfullscreen
-              title="{{ stitle }}"
-            ></iframe>
-          {% endif %}
+  
 
-
-    {% endif %}
-
-    <div class="featured-image-slider featured-slide color-{{ color_scheme }} gradient" 
-    style="background-image:url({{ media |  image_url: width:'1000' }});
+    <div class="featured-video-slider featured-slide color-{{ color_scheme }} gradient" style="
     --title_max_width:{{ title_max_width }}px;
-    --content_max_width:{{ content_max_width }}px;">
-            <div class="featured-mobile-image only-phone">
-            {% if media_phone %}
-                        
-                {{ media_phone
-                    | image_url: width:'300px', height:'50px'
-                    | image_tag:
-                    class: 'media_phone',
-                    loading: 'lazy',
-                    fetchpriority: 'high'  
-                    }}
-                        {% else %}
-                            {{ 'hero-apparel-1' | placeholder_svg_tag: 'media_phone' }}
-            {% endif %}
-            </div>
+    --content_max_width:{{ content_max_width }}px;
+    flex-direction: {{direction}};">
+           
             <div class="featured-slide-content">
                 {%  unless sub_title == blank %} <h5>{{ sub_title }}</h5>  {% endunless %} 
                 {%  unless title == blank   %} <h2>{{ title }}</h2>  {% endunless %}
                 {%  unless content == blank  %} <p>{{ content }}</p>  {% endunless %} 
                 
-
-         
-
                 {%  unless btn_url == blank  %} 
                     <a href="{{  btn_url }}" class="btn" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
                 {% endunless %}
 
-                {%  unless bottom_text == blank  %} <p>{{ bottom_text }}</p>  {% endunless %} 
-
-
             </div>
+
+           
+                {% liquid 
+                        if loop == true
+                        assign loop_true = '&loop=1'
+                        endif
+
+                        if autoplay == true
+                        assign autoplay_true = 1
+                    
+                        else if autoplay == false
+                        assign autoplay_true = 0
+                        endif
+                    %}
+                    {% if videotype == 'hosted'  %}
+                            {{ video 
+                            | video_tag:
+                                image_size: 'auto',
+                                autoplay: autoplay,
+                                controls: control,
+                                muted: mute,
+                                loop: loop,
+                                class:'featured-video'
+                            }}
+                    {%  elsif videotype == 'youtubevimeo' %}
+                    
+                        {% if video_url.type == 'youtube' %}
+                            <iframe
+                            src="https://www.youtube.com/embed/{{ video_url.id }}?enablejsapi=1&autoplay={{autoplay_true}}{{ loop_true }}"
+                            class="js-youtube featured-video"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            title="{{ title }}"
+                            ></iframe>
+                            
+                        {%  elsif video_url.type == 'vimeo' %} 
+                            <iframe
+                            src="https://player.vimeo.com/video/{{ video_url.id  }}?autoplay={{autoplay_true}}{{ loop_true }}"
+                            class="js-vimeo featured-video"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                            title="{{ stitle }}"
+                            ></iframe>
+                        {% endif %}
+
+
+                    {% endif %}
+            
 
     </div>
 

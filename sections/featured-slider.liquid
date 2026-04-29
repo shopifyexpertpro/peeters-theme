@@ -76,16 +76,7 @@
                         "visible_if": "{{ block.settings.video_option == true }}"
                     },
                     
-                    {
-                        "type": "image_picker",
-                        "id": "media",
-                        "label": "Add Slider Image"
-                    },
-                     {
-                        "type": "image_picker",
-                        "id": "media_phone",
-                        "label": "Slider Image For Mobile"
-                    },
+                  
                     {
                         "type": "text",
                          "id": "sub_title",
@@ -135,21 +126,27 @@
                          "id": "btn_url",
                         "label": "Button Link"
                     },
-                    
-                                      
-                    {
-                        "type": "text",
-                        "id":"bottom_text",
-                        "label": "*Short Text",
-                        "default":"*Zolang de voorraad strekt"
-                    },
-                   
+                               
                  
                     {
                     "type": "color_scheme",
                     "id": "color_scheme",
                     "label": "settings.color_scheme",
                     "default": "scheme-5"
+                     },
+                     {
+                        "type": "header",
+                        "content": "Phone Style"
+                     },
+                     {
+                        "type": "select",
+                        "id": "slider_style",
+                        "label":"Slider Style",
+                        "options": [
+                            { "label": "Media + Content" , "value": "mediacontent"},
+                            { "label": "Content + Content" , "value": "contentmedia"}
+                        ],
+                        "default":"mediacontent"
                      }
 
                     
@@ -331,6 +328,20 @@
                     "id": "color_scheme",
                     "label": "settings.color_scheme",
                     "default": "scheme-5"
+                     },
+                     {
+                        "type": "header",
+                        "content": "Phone Style"
+                     },
+                     {
+                        "type": "select",
+                        "id": "slider_style",
+                        "label":"Slider Style",
+                        "options": [
+                            { "label": "Media + Content" , "value": "mediacontent"},
+                            { "label": "Content + Content" , "value": "contentmedia"}
+                        ],
+                        "default":"mediacontent"
                      }
 
                     
@@ -554,6 +565,20 @@
                     "id": "color_scheme",
                     "label": "settings.color_scheme",
                     "default": "scheme-5"
+                     },
+                     {
+                        "type": "header",
+                        "content": "Phone Style"
+                     },
+                     {
+                        "type": "select",
+                        "id": "slide_style",
+                        "label":"Slide Style",
+                        "options": [
+                            { "label": "Media + Content" , "value": "mediacontent"},
+                            { "label": "Content + Media" , "value": "contentmedia"}
+                        ],
+                        "default":"mediacontent"
                      }
 
                     

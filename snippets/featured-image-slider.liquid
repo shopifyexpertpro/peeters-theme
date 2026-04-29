@@ -1,24 +1,35 @@
+{% liquid
+  if slide_style == 'mediacontent'
+    assign direction = 'column'
 
+  else if slide_style == 'contentmedia'
+    assign direction = 'column-reverse'
+
+  endif
+%}
 
 <div class="swiper-slide">
     <div class="featured-image-slider featured-slide color-{{ color_scheme }} gradient" 
     style="background-image:url({{ media |  image_url: width:'1000' }});
     --title_max_width:{{ title_max_width }}px;
-    --content_max_width:{{ content_max_width }}px;">
-            <div class="featured-mobile-image only-phone">
+    --content_max_width:{{ content_max_width }}px;
+    flex-direction: {{direction}};
+    
+    ">
+           
             {% if media_phone %}
                         
                 {{ media_phone
-                    | image_url: width:'300px', height:'50px'
+                    | image_url: width:'500px'
                     | image_tag:
-                    class: 'media_phone',
+                    class: 'media_phone only-phone',
                     loading: 'lazy',
                     fetchpriority: 'high'  
                     }}
                         {% else %}
-                            {{ 'hero-apparel-1' | placeholder_svg_tag: 'media_phone' }}
+                            {{ 'hero-apparel-1' | placeholder_svg_tag: 'media_phone only-phone'  }}
             {% endif %}
-            </div>
+           
             <div class="featured-slide-content">
                 {%  unless sub_title == blank %} <h5>{{ sub_title }}</h5>  {% endunless %} 
                 {%  unless title == blank   %} <h2>{{ title }}</h2>  {% endunless %}
@@ -141,7 +152,7 @@
                 --badge_width_phone: {{badge_width_phone}}px;
                 --vertical: {{vertical}}%;
                 --horizontal: {{horizontal}}%;
-                --vertical_phone: {{ vertical_phone}}p%;
+                --vertical_phone: {{ vertical_phone}}%;
                 --horizontal_phone: {{horizontal_phone}}%;                     
                                     
                  "
