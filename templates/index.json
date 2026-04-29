@@ -230,7 +230,7 @@
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
-            "color_scheme": "scheme-3",
+            "color_scheme": "scheme-5",
             "slide_style": "mediacontent"
           }
         },
@@ -238,7 +238,7 @@
           "type": "image-slider",
           "settings": {
             "media": "shopify://shop_images/Mask_group_3.png",
-            "media_phone": "shopify://shop_images/Mask_group_1.png",
+            "media_phone": "shopify://shop_images/Mask_group_4.png",
             "sub_title": "HET COMPLETE PAKKET",
             "title": "Bij aanschaf vaneen mountainbikeof racefiets",
             "title_max_width": 700,
