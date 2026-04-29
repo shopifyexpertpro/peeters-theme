@@ -160,6 +160,28 @@
     "featured_slider_qDYdph": {
       "type": "featured-slider",
       "blocks": {
+        "video_slider_miTcFw": {
+          "type": "video-slider",
+          "settings": {
+            "videotype": "hosted",
+            "video": "shopify://files/videos/d58ae12c3e1b4847a77ad85d7b218050.mp4",
+            "video_url": "",
+            "video_option": true,
+            "loop": true,
+            "autoplay": true,
+            "control": false,
+            "mute": true,
+            "sub_title": "",
+            "title": "Wij zoeken een ervaren fietsmonteur!",
+            "title_max_width": 430,
+            "content": "Heb jij net zo’n passie voor fietsen als wij en heb je ervaring in het onderhouden, repareren en afstellen van diverse fietsen? Bekijk dan onze vacature en wie weet tot snel!",
+            "content_max_width": 430,
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "color_scheme": "scheme-5",
+            "slider_style": "mediacontent"
+          }
+        },
         "product_slider_rgHYxU": {
           "type": "product-slider",
           "settings": {
@@ -182,7 +204,8 @@
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
-            "color_scheme": "scheme-1"
+            "color_scheme": "scheme-1",
+            "slider_style": "mediacontent"
           }
         },
         "image_slider_PXeC33": {
@@ -207,7 +230,8 @@
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "slide_style": "mediacontent"
           }
         },
         "image_slider_CFjbAR": {
@@ -238,7 +262,8 @@
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "slide_style": "mediacontent"
           }
         },
         "image_slider_npFByA": {
@@ -264,11 +289,13 @@
             "badge_width_phone": 200,
             "vertical_phone": 100,
             "horizontal_phone": 50,
-            "color_scheme": "scheme-3"
+            "color_scheme": "scheme-3",
+            "slide_style": "mediacontent"
           }
         }
       },
       "block_order": [
+        "video_slider_miTcFw",
         "product_slider_rgHYxU",
         "image_slider_PXeC33",
         "image_slider_CFjbAR",
