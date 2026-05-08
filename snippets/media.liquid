@@ -1,0 +1,19 @@
+ 
+ 
+ {% if media %}
+
+    {%  capture media_style %} 
+        
+    
+    {% endcapture %} 
+                        
+    {{ media
+        | image_url: width:'1200px'
+        | image_tag:
+        class: 'media_style',
+        loading: 'lazy',
+        fetchpriority: 'high'  
+        }}
+    {% else %}
+        {{ 'hero-apparel-1' | placeholder_svg_tag: 'media_phone only-phone'  }}
+{% endif %}

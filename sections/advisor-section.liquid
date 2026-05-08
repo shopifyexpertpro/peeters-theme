@@ -1,0 +1,61 @@
+{%  capture children %} 
+ {% content_for 'blocks' %}
+{% endcapture %} 
+
+{%  render 'advisor-section', section:section, children :children  %} 
+
+
+{%  schema  %} 
+    {
+        "name": "Advisor Section",
+        "class": "advisor-section",
+        "tag": "section",
+        "blocks": [
+            {
+                "type": "@theme"
+            }
+        ],
+        "settings": [
+            {
+                "type": "header",
+                "content": "Section Style"
+            },
+            {
+                "type": "text",
+                "id": "layout_max_width",
+                "label": "Layout Max Width",
+                "default":"1603px"
+            },
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "settings.color_scheme",
+                "default": "scheme-1"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "label": "Padding Top",
+                "max": 100,
+                "min": 0,
+                "step": 5,
+                "default":20,
+                "unit": "px"
+            },
+             {
+                "type": "range",
+                "id": "padding_bottom",
+                "label": "Padding Bottom",
+                "max": 100,
+                "min": 0,
+                "step": 5,
+                "default":20,
+                "unit": "px"
+            }
+        ],
+        "presets": [
+            {
+            "name": "Advisor Section"
+        }]
+    }
+{% endschema %} 

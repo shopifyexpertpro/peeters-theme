@@ -16,6 +16,16 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
     letter-spacing: 0%;
 }
+.media_style {
+    max-width: 100%;
+    height: auto;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 strong {
     color: rgba(var(--color-button), var(--alpha-button-background));
     font-weight: 600;
@@ -51,7 +61,7 @@ font-size:85px;
 } 
 }
 .btn {
-    color: rgb(var(--color-foreground));
+    color: rgb(var(--color-button-text));
     font-size: 20px;
     font-weight: 500;
     line-height: 90%;

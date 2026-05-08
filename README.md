@@ -18,5 +18,5 @@ git push origin main
 
 
 git add .
-git commit -m "update video slider"
+git commit -m "update advisor slider"
 git push origin main
