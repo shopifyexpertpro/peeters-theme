@@ -7,23 +7,33 @@
 
 .block-advisor  .advisor_style {
     position: relative;
+    overflow: hidden;
+   
     
 }
-
-.block-advisor .advisor_block_style {
+.block-advisor img.media_style {
+    border-bottom-right-radius: 200px;
+}
+.block-advisor .advisor_bg_style {
     position: absolute;
-    left: 0;
-    bottom: 0;;
-    height: calc(100% -50%);
     width: 100%;
+    height: calc(100% - 50px);
     display: block;
+    left: 0;
+    bottom: 0;
     z-index: 0;
-    border-radius: var( --border_radius);
+    border-radius: var(--border_radius);
     background: var(--bg_color);
 
 }
+.block-advisor .advisor_style > *:not(.advisor_bg_style) {
+    position: relative;
+    z-index: 1;
+}
 .block-advisor .advisor_content_style {
 padding:var(--block_padding_vertical) var(--block_padding_horizontal);
+position: relative;
+ z-index: 2;
 }
 
 .block-advisor .content {

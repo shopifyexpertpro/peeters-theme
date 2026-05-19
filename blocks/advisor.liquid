@@ -22,12 +22,12 @@ assign bg_color = block.settings.bg_color
 
 
 
-<div class="color-{{ color_scheme }} gradient advisor_style">
+<div class="advisor_style color-{{ color_scheme }} gradient">
 
-<div class="advisor_block_style"></div>
-    {% if media %}
+    <div class="advisor_bg_style"></div>
+        
         {%  render 'media' media:media %}
-    {% endif %}
+      
     
    <div class="advisor_content_style">
      {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 

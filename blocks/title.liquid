@@ -7,6 +7,7 @@ assign title = block.settings.title
 assign content = block.settings.content
 assign btn_text = block.settings.btn_text
 assign btn_url= block.settings.btn_url
+assign block_style = block.settings.block_style
 
 
 assign block_width = block.settings.block_width
@@ -30,7 +31,7 @@ assign color_scheme = block.settings.color_scheme
     {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 
     
     {%  unless btn_url == blank  %} 
-        <a href="{{  btn_url }}" class="btn" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
+        <a href="{{  btn_url }}" class="btn {{ block_style }}" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
     {% endunless %}
 
     
@@ -84,6 +85,18 @@ assign color_scheme = block.settings.color_scheme
         "type": "url",
         "id": "btn_url",
         "label": "Button Link"
+    },
+     {
+        "type": "select",
+        "id": "block_style",
+        "label": "Button Style",
+        "options": [
+            { "value": "filled","label": "Filled" },
+            { "value": "outline","label": "Outline" },
+            { "value": "linked","label": "Linked" }
+            
+
+        ]
     },
     {
         "type": "header",
