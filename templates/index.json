@@ -309,106 +309,6 @@
         "padding_bottom": 20
       }
     },
-    "advisor_section_PMnaRT": {
-      "type": "advisor-section",
-      "blocks": {
-        "title_naN7AA": {
-          "type": "title",
-          "name": "Title",
-          "settings": {
-            "sub_title": "sub title",
-            "title": "Single Title",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
-            "btn_text": "BEKIJK VACATURE",
-            "btn_url": "",
-            "button_style": "filled",
-            "block_width": "50%",
-            "block_padding_horizontal": 30,
-            "block_padding_vertical": 30,
-            "title_max_width": 500,
-            "content_max_width": 500,
-            "title_size": "large",
-            "title_margin_bottom": 30,
-            "color_scheme": ""
-          },
-          "blocks": {}
-        },
-        "content_cGAaqb": {
-          "type": "content",
-          "name": "Content",
-          "settings": {
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
-            "btn_text": "BEKIJK VACATURE",
-            "btn_url": "",
-            "button_style": "filled",
-            "block_width": "50%",
-            "block_padding_horizontal": 30,
-            "block_padding_vertical": 30,
-            "content_max_width": 500,
-            "color_scheme": ""
-          },
-          "blocks": {}
-        },
-        "advisor_XhJi7k": {
-          "type": "advisor",
-          "name": "Advisor",
-          "settings": {
-            "media": "shopify://shop_images/Group_357.png",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
-            "btn_text": "BEKIJK VACATURE",
-            "btn_url": "",
-            "button_style": "filled",
-            "block_width": "50%",
-            "alignment": "center",
-            "border_radius": 25,
-            "block_padding_horizontal": 30,
-            "block_padding_vertical": 30,
-            "bg_color": "#06123d",
-            "content_max_width": 500,
-            "content_alignment": "left",
-            "color_scheme": ""
-          },
-          "blocks": {}
-        },
-        "advisor_FE7kDT": {
-          "type": "advisor",
-          "name": "Advisor",
-          "settings": {
-            "media": "shopify://shop_images/Group_356.png",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
-            "btn_text": "BEKIJK VACATURE",
-            "btn_url": "",
-            "button_style": "filled",
-            "block_width": "50%",
-            "alignment": "center",
-            "border_radius": 25,
-            "block_padding_horizontal": 30,
-            "block_padding_vertical": 30,
-            "bg_color": "#06123d",
-            "content_max_width": 500,
-            "content_alignment": "left",
-            "color_scheme": ""
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "title_naN7AA",
-        "content_cGAaqb",
-        "advisor_XhJi7k",
-        "advisor_FE7kDT"
-      ],
-      "name": "Advisor Section",
-      "settings": {
-        "layout_max_width": "1603px",
-        "color_scheme": "scheme-3",
-        "alignment": "center",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "gap_horizontal": 20,
-        "gap_vertical": 20
-      }
-    },
     "advisor_section_a3KFkL": {
       "type": "advisor-section",
       "blocks": {
@@ -474,7 +374,7 @@
           "type": "advisor",
           "name": "Advisor",
           "settings": {
-            "media": "shopify://shop_images/Group_357.png",
+            "media": "shopify://shop_images/Group_356.png",
             "content": "",
             "btn_text": "REPARATIES",
             "btn_url": "shopify://products/wielerkleding-actie-in-heel",
@@ -735,7 +635,6 @@
     "hero_banner_YQMNd7",
     "scrolling_logo_kqrntT",
     "featured_slider_qDYdph",
-    "advisor_section_PMnaRT",
     "advisor_section_a3KFkL",
     "image_banner",
     "featured_slider_43YLkQ",
