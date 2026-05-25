@@ -309,6 +309,106 @@
         "padding_bottom": 20
       }
     },
+    "advisor_section_j7ycCx": {
+      "type": "advisor-section",
+      "blocks": {
+        "title_D3Emhj": {
+          "type": "title",
+          "name": "Title",
+          "settings": {
+            "sub_title": "sub title",
+            "title": "Single Title",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "block_width": "50%",
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "title_max_width": 500,
+            "content_max_width": 500,
+            "title_size": "large",
+            "title_margin_bottom": 30,
+            "color_scheme": ""
+          },
+          "blocks": {}
+        },
+        "content_iTA3bF": {
+          "type": "content",
+          "name": "Content",
+          "settings": {
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "block_width": "50%",
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "content_max_width": 500,
+            "color_scheme": ""
+          },
+          "blocks": {}
+        },
+        "advisor_Vgr3eT": {
+          "type": "advisor",
+          "name": "Advisor",
+          "settings": {
+            "media": "shopify://shop_images/Mask_group_1200x_14be67c5-502d-41c1-807b-dc2507f58edb.webp",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "block_width": "50%",
+            "alignment": "center",
+            "border_radius": 25,
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "bg_color": "#06123d",
+            "content_max_width": 500,
+            "content_alignment": "left",
+            "color_scheme": ""
+          },
+          "blocks": {}
+        },
+        "advisor_BiCKqr": {
+          "type": "advisor",
+          "name": "Advisor",
+          "settings": {
+            "media": "shopify://shop_images/Home-PT-asset_1200x_f7d110d0-6f2d-4c1d-9ab8-0c76e82033dd.webp",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "block_width": "50%",
+            "alignment": "center",
+            "border_radius": 25,
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "bg_color": "#06123d",
+            "content_max_width": 500,
+            "content_alignment": "left",
+            "color_scheme": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title_D3Emhj",
+        "content_iTA3bF",
+        "advisor_Vgr3eT",
+        "advisor_BiCKqr"
+      ],
+      "name": "Advisor Section",
+      "settings": {
+        "layout_max_width": "1603px",
+        "color_scheme": "scheme-3",
+        "alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "gap_horizontal": 20,
+        "gap_vertical": 20
+      }
+    },
     "advisor_section_McJxbU": {
       "type": "advisor-section",
       "blocks": {
@@ -398,6 +498,7 @@
         "advisor_zbGYM8",
         "advisor_WTzgDP"
       ],
+      "disabled": true,
       "name": "Advisor Section",
       "settings": {
         "layout_max_width": "1603px",
@@ -498,6 +599,7 @@
         "advisor_84EJKX",
         "advisor_8brnhx"
       ],
+      "disabled": true,
       "name": "Advisor Section",
       "settings": {
         "layout_max_width": "1603px",
@@ -514,6 +616,7 @@
     "hero_banner_YQMNd7",
     "scrolling_logo_kqrntT",
     "featured_slider_qDYdph",
+    "advisor_section_j7ycCx",
     "advisor_section_McJxbU",
     "advisor_section_a3KFkL"
   ]
