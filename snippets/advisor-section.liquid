@@ -5,12 +5,19 @@
     assign layout_max_width = section.settings.layout_max_width
     assign padding_top = section.settings.padding_top
     assign padding_bottom = section.settings.padding_bottom
+    assign gap_horizontal = section.settings.gap_horizontal
+    assign gap_vertical = section.settings.gap_vertical
+    assign alignment = section.settings.alignment
+
 
 %} 
 {%  style  %}
 .advisor-section {
 --padding_top:{{padding_top}}px;
 --padding_bottom:{{padding_bottom}}px;
+--gap_horizontal:{{gap_horizontal}}px;
+--gap_vertical:{{gap_vertical}}px;
+--alignment:{{alignment}}
 
 
 

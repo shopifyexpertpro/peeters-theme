@@ -33,6 +33,19 @@
                 "default": "scheme-1"
             },
             {
+                "type": "select",
+                "default":"center",
+                "id": "alignment",
+                "label": "Block Alignment",
+                "options": [
+                    {"value": "flex-start", "label":"Top"},
+                    {"value": "center", "label":"Center"},
+                    {"value": "flex-end", "label":"Bottom"},
+                ]
+
+            },
+           
+            {
                 "type": "range",
                 "id": "padding_top",
                 "label": "Padding Top",
@@ -46,6 +59,26 @@
                 "type": "range",
                 "id": "padding_bottom",
                 "label": "Padding Bottom",
+                "max": 100,
+                "min": 0,
+                "step": 5,
+                "default":20,
+                "unit": "px"
+            },
+            {
+                "type": "range",
+                "id": "gap_horizontal",
+                "label": "Column Gap Horizontal",
+                "max": 100,
+                "min": 0,
+                "step": 5,
+                "default":20,
+                "unit": "px"
+            },
+           {
+                "type": "range",
+                "id": "gap_vertical",
+                "label": "Column Gap Vertical",
                 "max": 100,
                 "min": 0,
                 "step": 5,

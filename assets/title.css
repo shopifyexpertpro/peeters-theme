@@ -8,10 +8,17 @@
 .block-title  .title_style {
     padding:var(--block_padding_vertical) var(--block_padding_horizontal);
 }
+.block-title h5 {
+    color:rgb(var(--color-link));
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 25px;
 
+}
 .block-title h2 {
     max-width: var(--title_max_width);
     margin-bottom: var(--title_margin_bottom);
+    font-size: 65px;
 }
 
 .block-title .content {

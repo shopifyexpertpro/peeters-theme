@@ -22,8 +22,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .flex {
     display: flex;
-    align-items: center;
+    align-items: var(--alignment);
     flex-wrap: wrap;
+    gap:var(--gap_vertical) var(--gap_horizontal);
 }
 
 strong {
@@ -92,7 +93,45 @@ margin-left: 0px;
     position: relative;
     z-index: 1;
 }
-.btn::before {
+
+.btn.outline {
+   border:2px solid rgb(var(--color-link));
+   color:rgb(var(--color-link));  
+}
+
+.btn.outline svg path {
+  fill:rgb(var(--color-link));  
+}
+
+.btn.filled svg path {
+  fill:rgb(var(--color-button-text));  
+}
+
+.btn.linked svg path {
+   fill:rgb(var(--color-link));  
+}
+
+.btn.linked {
+    padding: 5px 0px;
+    border-bottom: 2px solid;
+    border-radius: 0;
+   color:rgb(var(--color-link)); 
+   transition-duration: .4s;
+}
+.btn.linked svg {
+opacity: 1;
+margin-left: 0px;
+
+}
+
+.btn.linked:hover {
+    color:rgb(var(--color-button-text));  
+}
+.btn.linked:hover svg path {
+  fill:rgb(var(--color-button-text));  
+}
+
+.btn.filled::before {
 content: " ";
 position: absolute;
 width: 100%;
@@ -105,7 +144,7 @@ background: rgb(var(--color-button));
 transition-duration: .4s;
 }
 
-.btn::after {
+.btn.filled::after {
 content: " ";
 position: absolute;
 width:0;
@@ -117,7 +156,7 @@ background: rgba(var(--color-shadow));
 transition-duration: .4s;
 }
 
-.btn:hover::after {
+.btn.filled:hover::after {
 width: 100%;
 }
 @media(max-width:767px) {

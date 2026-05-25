@@ -6,15 +6,21 @@ assign media = block.settings.media
 assign content = block.settings.content
 assign btn_text = block.settings.btn_text
 assign btn_url= block.settings.btn_url
+assign button_style = block.settings.button_style
 
 
 assign block_width = block.settings.block_width
 assign border_radius = block.settings.border_radius
 assign content_max_width = block.settings.content_max_width
+assign content_alignment = block.settings.content_alignment
+
 assign block_padding_horizontal = block.settings.block_padding_horizontal
 assign block_padding_vertical = block.settings.block_padding_vertical
 assign color_scheme = block.settings.color_scheme
 assign bg_color = block.settings.bg_color
+assign alignment = block.settings.alignment
+
+
 
 
 %}
@@ -32,9 +38,11 @@ assign bg_color = block.settings.bg_color
    <div class="advisor_content_style">
      {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 
     
-    {%  unless btn_url == blank  %} 
-        <a href="{{  btn_url }}" class="btn" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
-    {% endunless %}
+     {%  render 'btn', 
+        btn_text:btn_text, 
+        btn_url:btn_url, 
+        button_style:button_style
+    %} 
    </div>
 
     
@@ -42,13 +50,15 @@ assign bg_color = block.settings.bg_color
 </div>
 
 {%  style  %}
-.block-advisor {
-    --block_width: {{block_width}};
+#shopify-block-{{ block.id }}.block-advisor {
+    --block_width:calc({{block_width}} - var(--gap_horizontal)/2);
     --border_radius: {{border_radius}}px;
     --content_max_width: {{content_max_width}}px;
     --block_padding_horizontal: {{block_padding_horizontal}}px;
     --block_padding_vertical: {{block_padding_vertical}}px;
     --bg_color:{{bg_color}};
+    --alignment:{{alignment}};
+    --content_alignment:{{content_alignment}}
 }
 
 {% endstyle %}
@@ -84,6 +94,18 @@ assign bg_color = block.settings.bg_color
         "label": "Button Link"
     },
     {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button Style",
+        "options": [
+            { "value": "filled","label": "Filled" },
+            { "value": "outline","label": "Outline" },
+            { "value": "linked","label": "Linked" }
+            
+
+        ]
+    },
+    {
         "type": "header",
         "content": "style"
     },
@@ -105,6 +127,18 @@ assign bg_color = block.settings.bg_color
             
 
         ]
+    },
+     {
+        "type": "select",
+        "default":"center",
+        "id": "alignment",
+        "label": "Block Alignment",
+        "options": [
+            {"value": "flex-start", "label":"Start"},
+            {"value": "center", "label":"Center"},
+            {"value": "flex-end", "label":"End"},
+            ]
+
     },
      {
         "type": "range",
@@ -151,6 +185,18 @@ assign bg_color = block.settings.bg_color
         "step": 10,
         "default":500,
         "unit": "px"
+    },
+      {
+        "type": "select",
+        "default":"left",
+        "id": "content_alignment",
+        "label": "Block Alignment",
+        "options": [
+            {"value": "left", "label":"Start"},
+            {"value": "center", "label":"Center"},
+            {"value": "right", "label":"End"},
+            ]
+
     },
      
    

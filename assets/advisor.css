@@ -2,11 +2,13 @@
 
     flex-basis:var(--block_width);
     max-width:var(--block_width);
+    height: stretch;
 
 }
 
 .block-advisor  .advisor_style {
     position: relative;
+    height: 100%;
     overflow: hidden;
    
     
@@ -34,8 +36,12 @@
 padding:var(--block_padding_vertical) var(--block_padding_horizontal);
 position: relative;
  z-index: 2;
+     display: flex;
+    flex-direction: column;
+    align-items: var(--alignment);
 }
 
 .block-advisor .content {
    max-width: var(--content_max_width); 
+   text-align: var(--content_alignment);
 }

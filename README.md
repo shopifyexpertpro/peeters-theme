@@ -18,5 +18,5 @@ git push origin main
 
 
 git add .
-git commit -m "update advisor slider"
+git commit -m "update advisor style"
 git push origin main

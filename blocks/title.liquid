@@ -7,7 +7,7 @@ assign title = block.settings.title
 assign content = block.settings.content
 assign btn_text = block.settings.btn_text
 assign btn_url= block.settings.btn_url
-assign block_style = block.settings.block_style
+assign button_style = block.settings.button_style
 
 
 assign block_width = block.settings.block_width
@@ -30,17 +30,19 @@ assign color_scheme = block.settings.color_scheme
     {%  unless title == blank   %} <h2 class="title_{{title_size}}">{{ title }}</h2>  {% endunless %}
     {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 
     
-    {%  unless btn_url == blank  %} 
-        <a href="{{  btn_url }}" class="btn {{ block_style }}" ><span>{{  btn_text }}</span> {% render 'right-arrow' %} </a>
-    {% endunless %}
+    {%  render 'btn', 
+        btn_text:btn_text, 
+        btn_url:btn_url, 
+        button_style:button_style
+    %} 
 
-    
                 
 </div>
 
 {%  style  %}
-.block-title {
-    --block_width: {{block_width}};
+#shopify-block-{{ block.id }}.block-title {
+    /* --block_width: {{block_width}}; */
+    --block_width:calc({{block_width}} - var(--gap_horizontal)/2);
     --title_max_width: {{title_max_width}}px;
     --title_margin_bottom:{{title_margin_bottom}}px;
     --content_max_width: {{content_max_width}}px;
@@ -88,7 +90,7 @@ assign color_scheme = block.settings.color_scheme
     },
      {
         "type": "select",
-        "id": "block_style",
+        "id": "button_style",
         "label": "Button Style",
         "options": [
             { "value": "filled","label": "Filled" },
