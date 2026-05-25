@@ -20,19 +20,53 @@ assign color_scheme = block.settings.color_scheme
 assign bg_color = block.settings.bg_color
 assign alignment = block.settings.alignment
 
+assign add_icon = block.settings.add_icon
+assign icon_type = block.settings.icon_type
+assign icon_image = block.settings.icon_image
+assign icon_svg = block.settings.icon_svg
+assign icon_style = block.settings.icon_style
+assign icon_size = block.settings.icon_size
+
 
 
 
 %}
 
+{%  unless add_icon == false %}
+    {%  capture advisor_icon %}  
 
+        {% if icon_style == 'without_color' %}
+            <div class="icon_style ">
+                 {% if icon_type == 'svg' %}
+                     {{ icon_svg }}
+                {% elsif icon_type == 'image' %}
+                     {%  render 'media' media:icon_image %}
+                {% endif %}
+            </div>
+        {% elsif icon_style == 'with_color' %}
+            <div class="icon_style color_icon">
+                {% if icon_type == 'svg' %}
+                     {{ icon_svg }}
+                {% elsif icon_type == 'image' %}
+                     {%  render 'media' media:icon_image %}
+                {% endif %}
+            </div>
+        {% endif %}
+       
+        
+
+    {% endcapture %}
+{% endunless %}
 
 
 <div class="advisor_style color-{{ color_scheme }} gradient">
 
     <div class="advisor_bg_style"></div>
         
-        {%  render 'media' media:media %}
+        <div class="advisor_media">
+            {%  render 'media' media:media %}
+        {{ advisor_icon }}
+        </div>
       
     
    <div class="advisor_content_style">
@@ -58,7 +92,8 @@ assign alignment = block.settings.alignment
     --block_padding_vertical: {{block_padding_vertical}}px;
     --bg_color:{{bg_color}};
     --alignment:{{alignment}};
-    --content_alignment:{{content_alignment}}
+    --content_alignment:{{content_alignment}};
+    --icon_size:{{icon_size}}px;
 }
 
 {% endstyle %}
@@ -83,6 +118,35 @@ assign alignment = block.settings.alignment
       "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
     },
     {
+        "type": "checkbox",
+        "id": "add_icon",
+        "label": "Add Icon",
+        "default":false
+    },
+    {
+        "type": "select",
+        "options": [
+            { "value": "svg", "label": "Svg"},
+             { "value": "image", "label": "Image"}
+        ],
+        "id": "icon_type",
+        "label": "Select Svg or Image",
+        "default":"image",
+        "visible_if": "{{ block.settings.add_icon == true }}"
+    },
+    {
+        "type": "image_picker",
+        "id": "icon_image",
+        "label": "Add Image Icon",
+        "visible_if": "{{ block.settings.icon_type == 'image' and block.settings.add_icon == true }}"
+    },
+    {
+        "type": "html",
+        "id": "icon_svg",
+        "label": "Add Svg Code",
+        "visible_if": "{{ block.settings.icon_type == 'svg' and block.settings.add_icon == true }}"
+    },
+    {
         "type": "text",
         "id": "btn_text",
         "label": "Button Text",
@@ -92,6 +156,32 @@ assign alignment = block.settings.alignment
         "type": "url",
         "id": "btn_url",
         "label": "Button Link"
+    },
+     {
+        "type": "header",
+        "content": "style"
+    },
+    {
+        "type": "select",
+        "label": "Icon Style",
+        "id": "icon_style",
+        "default":"without_color",
+        "options": [
+            { "value": "with_color", "label": "With Color"},
+            { "value": "without_color", "label": "Without Color"}
+        ],
+         "visible_if": "{{ block.settings.add_icon == true }}"
+    },
+    {
+        "type": "range",
+        "id": "icon_size",
+        "label": "Icon Size",
+        "min": 30,
+        "max": 200,
+        "default":50,
+        "step": 2,
+        "unit": "px",
+        "visible_if": "{{ block.settings.add_icon == true }}"
     },
     {
         "type": "select",
@@ -105,10 +195,7 @@ assign alignment = block.settings.alignment
 
         ]
     },
-    {
-        "type": "header",
-        "content": "style"
-    },
+   
     {
         "type": "select",
         "id": "block_width",
