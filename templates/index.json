@@ -420,12 +420,31 @@
         "gap_horizontal": 20,
         "gap_vertical": 20
       }
+    },
+    "bicycles_section_6EFAmk": {
+      "type": "bicycles-section",
+      "name": "Bicycles Slider",
+      "settings": {
+        "layout_max_width": "1603px",
+        "background_color": "#06123D",
+        "color_scheme": "",
+        "block_align": "center",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "gap_horizontal": 20,
+        "gap_vertical": 20,
+        "radius_top_left": 0,
+        "radius_top_right": 0,
+        "radius_bottom_left": 250,
+        "radius_bottom_right": 0
+      }
     }
   },
   "order": [
     "hero_banner_YQMNd7",
     "scrolling_logo_kqrntT",
     "featured_slider_qDYdph",
-    "advisor_section_MADQAU"
+    "advisor_section_MADQAU",
+    "bicycles_section_6EFAmk"
   ]
 }
