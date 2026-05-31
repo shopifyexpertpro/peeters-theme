@@ -1,0 +1,239 @@
+{{ 'slides.css' | asset_url | stylesheet_tag }}
+
+{% liquid 
+  assign aspect_ratio = block.settings.media_size
+  assign radius = block.settings.radius
+  assign overlay = block.settings.overlay
+  assign navigation = block.settings.navigation
+  assign pagenation = block.settings.pagenation
+
+  assign gap = block.settings.gap
+  assign slide_per_row = block.settings.slide_per_row
+  assign is_partile = block.settings.is_partile
+
+  unless is_partile == false
+  assign partial = block.settings.partial
+  endunless
+ assign desktop_view = slide_per_row | append: '.' | append: partial
+  
+  
+  assign gap_phone = block.settings.gap_phone
+  assign slide_per_row_phone = block.settings.slide_per_row_phone
+  assign is_partile_phone = block.settings.is_partile_phone
+
+   unless is_partile_phone == false
+   assign partial_phone = block.settings.partial_phone
+  endunless
+ assign phone_view = slide_per_row_phone | append: '.' | append: partial_phone
+
+
+ 
+%}
+
+
+
+{% style %}
+#shopify-block-{{ block.id }} {
+  --aspect_ratio: {{ aspect_ratio }};
+  --radius: {{ radius }}px;
+
+  {% if overlay == true %}
+    --content:''
+{% else %}
+  --content:none  
+{% endif %}
+
+}
+
+
+{% endstyle %}
+
+<div class="swiper mySwiper_{{ block.id }}">
+  <div class="swiper-wrapper">
+
+    {% content_for 'blocks' %}
+
+  </div>
+
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+  
+     var swiper = new Swiper(".mySwiper_{{ block.id }}", {
+      slidesPerView: {{phone_view}},
+      spaceBetween: {{gap_phone}},
+      navigation: {
+        nextEl: ".mySwiper_{{ block.id }} .swiper-button-next",
+        prevEl: ".mySwiper_{{ block.id }} .swiper-button-prev",
+      },
+       breakpoints: {
+        
+        768: {
+          slidesPerView: {{desktop_view}},
+          spaceBetween: {{gap}},
+        },
+        
+      },
+    });
+ 
+</script>
+
+{% schema %}
+{
+  "name": "Slides",
+   "class": "swiper-slide",
+  "blocks": [
+    {
+      "type": "_bicyle"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Slider Style"
+    },
+    {
+      "type": "select",
+      "id": "media_size",
+      "label": "Media Size",
+      "default": "auto",
+      "options": [
+        {
+          "label": "Adapt the default size",
+          "value": "auto"
+        },
+        {
+          "label": "Portrait",
+          "value": "2/3"
+        },
+        {
+          "label": "Horizontal",
+          "value": "3/2"
+        },
+        {
+          "label": "Square",
+          "value": "1/1"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "radius",
+      "label": "Radius",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+        "type": "checkbox",
+        "id": "overlay",
+        "label": "Overlay Color",
+        "default": true
+    },
+    {
+        "type": "checkbox",
+        "id": "navigation",
+        "label": "navigation",
+        "default": true
+    },
+     {
+        "type": "checkbox",
+        "id": "pagenation",
+        "label": "Pagenation",
+        "default": true
+    },
+    {
+        "type": "header",
+        "content": "Deksto Slide"
+    },
+     {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default":30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slide_per_row",
+      "label": "Slider Per Row",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 4,
+      "unit": "px"
+    },
+    
+    {
+        "type": "checkbox",
+        "id": "is_partile",
+        "label": "Partila Slide",
+        "default":true
+    },
+     {
+      "type": "range",
+      "id": "partial",
+      "label": "Partial",
+      "min": 1,
+      "max": 9,
+      "step": 0.1,
+      "default":2,
+      "unit": "px",
+      "visible_if": "{{ block.settings.is_partile == true }}"
+    },
+    {
+        "type": "header",
+        "content": "Mobile Slide"
+    },
+     {
+      "type": "range",
+      "id": "gap_phone",
+      "label": "Gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default":30,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "slide_per_row_phone",
+      "label": "Slider Per Phone",
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "default": 1,
+      "unit": "px"
+    },
+    {
+        "type": "checkbox",
+        "id": "is_partile_phone",
+        "label": "Partila Slide",
+        "default":true
+    },
+     {
+      "type": "range",
+      "id": "partial_phone",
+      "label": "Partial",
+      "min": 1,
+      "max": 9,
+      "step": 0.1,
+      "default":2,
+      "unit": "px",
+      "visible_if": "{{ block.settings.is_partile_phone == true}}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slides"
+    }
+  ]
+}
+{% endschema %}

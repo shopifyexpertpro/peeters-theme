@@ -1,0 +1,54 @@
+
+{%  liquid 
+assign image = block.settings.image
+assign title = block.settings.title
+assign link = block.settings.link
+
+
+%}
+
+
+
+<div class="bicycle">
+    {%  render 'media' , media:image %}
+    <h3>
+    {% if link != blank %}
+   <a href="{{ link }}" class="btn"> {{ title }}  {% render 'right-arrow' %} </a>
+    {%  else %}
+      {{ title }}
+    {% endif %}
+    </h3>
+</div>
+
+
+{%  schema  %} 
+{
+    "class": "swiper-slide",
+    "name": "Bicyle",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":" E-bikes"
+        },
+        {
+            "type": "url",
+            "id": "link",
+            "label": "Url"
+        },
+      
+    ],
+    "presets": [
+        {
+        "name": "Bicyle"
+        }
+    ]
+}
+
+{% endschema %}
