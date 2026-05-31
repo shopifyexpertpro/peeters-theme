@@ -421,23 +421,23 @@
         "gap_vertical": 20
       }
     },
-    "bicycles_section_6EFAmk": {
+    "bicycles_section_RRDTXh": {
       "type": "bicycles-section",
       "blocks": {
-        "title_hJbqnw": {
+        "title_FQbd9F": {
           "type": "title",
           "name": "Title",
           "settings": {
-            "sub_title": "sub title",
-            "title": "Single Title",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "sub_title": "",
+            "title": "Bekijk ons veelzijdige assortiment fietsen",
+            "content": "",
             "btn_text": "BEKIJK VACATURE",
             "btn_url": "",
             "button_style": "filled",
-            "block_width": "20%",
+            "block_width": "60%",
             "block_padding_horizontal": 30,
             "block_padding_vertical": 30,
-            "title_max_width": 500,
+            "title_max_width": 720,
             "content_max_width": 500,
             "title_size": "large",
             "title_margin_bottom": 30,
@@ -445,26 +445,64 @@
           },
           "blocks": {}
         },
-        "slides_gyr6bc": {
+        "slides_Mxc4Vj": {
           "type": "slides",
           "name": "Slides",
           "settings": {
             "media_size": "auto",
             "radius": 20,
             "overlay": true,
-            "navigation": true,
-            "pagenation": true,
             "gap": 30,
             "slide_per_row": 4,
             "is_partile": true,
-            "partial": 2,
+            "partial": 5,
             "gap_phone": 30,
             "slide_per_row_phone": 1,
-            "is_partile_phone": true,
+            "is_partile_phone": false,
             "partial_phone": 2
           },
           "blocks": {
-            "bicyle_Ux3KmU": {
+            "bicyle_tgwU6e": {
+              "type": "_bicyle",
+              "name": "Bicyle",
+              "settings": {
+                "image": "shopify://shop_images/Peeters_Tweewielers_sRGB-39_1.png",
+                "title": "E-bikes",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "bicyle_gBewGz": {
+              "type": "_bicyle",
+              "name": "Bicyle",
+              "settings": {
+                "image": "shopify://shop_images/Peeters_Tweewielers_sRGB-39_1_1.png",
+                "title": "E-bikes",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "bicyle_4g6VLe": {
+              "type": "_bicyle",
+              "name": "Bicyle",
+              "settings": {
+                "image": "shopify://shop_images/Peeters_Tweewielers_sRGB-39_1_2.png",
+                "title": "E-bikes",
+                "link": "shopify://products/wielerkleding-actie-in-heel"
+              },
+              "blocks": {}
+            },
+            "bicyle_3UHfpt": {
+              "type": "_bicyle",
+              "name": "Bicyle",
+              "settings": {
+                "image": "shopify://shop_images/Peeters_Tweewielers_sRGB-39_1.png",
+                "title": "E-bikes",
+                "link": ""
+              },
+              "blocks": {}
+            },
+            "bicyle_Rbzj3X": {
               "type": "_bicyle",
               "name": "Bicyle",
               "settings": {
@@ -476,18 +514,22 @@
             }
           },
           "block_order": [
-            "bicyle_Ux3KmU"
+            "bicyle_tgwU6e",
+            "bicyle_gBewGz",
+            "bicyle_4g6VLe",
+            "bicyle_3UHfpt",
+            "bicyle_Rbzj3X"
           ]
         }
       },
       "block_order": [
-        "title_hJbqnw",
-        "slides_gyr6bc"
+        "title_FQbd9F",
+        "slides_Mxc4Vj"
       ],
       "name": "Bicycles Slider",
       "settings": {
         "layout_max_width": "1603px",
-        "background_color": "#06123D",
+        "background_color": "#06123d",
         "color_scheme": "scheme-3",
         "block_align": "center",
         "padding_top": 20,
@@ -506,6 +548,6 @@
     "scrolling_logo_kqrntT",
     "featured_slider_qDYdph",
     "advisor_section_MADQAU",
-    "bicycles_section_6EFAmk"
+    "bicycles_section_RRDTXh"
   ]
 }
