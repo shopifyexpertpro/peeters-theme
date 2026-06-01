@@ -1,5 +1,5 @@
 
-{{ 'bicyles-section.css' | asset_url | stylesheet_tag }}
+{{ 'richtext-section.css' | asset_url | stylesheet_tag }}
 
 
 
@@ -61,15 +61,18 @@ background-color: var(--background_color);
 
 {% schema %}
 {
-  "name": "Bicycles Slider",
-  "class": "bicycles-section",
+  "name": "Richtext Section",
+  "class": "richtext-section",
   "tag": "section",
   "blocks": [
     {
       "type": "title"
     },
      {
-      "type": "slides"
+      "type": "media"
+    },
+    {
+      "type": "content"
     }
   ],
   "settings": [
@@ -205,7 +208,7 @@ background-color: var(--background_color);
   },
   "presets": [
     {
-      "name": "Bicycles Slider"
+      "name": "Richtext Section"
     }
   ]
 }

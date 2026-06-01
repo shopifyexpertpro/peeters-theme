@@ -1,0 +1,305 @@
+{{ 'media.css' | asset_url | stylesheet_tag }}
+
+
+{% liquid 
+assign media = block.settings.media
+assign content = block.settings.content
+assign btn_text = block.settings.btn_text
+assign btn_url= block.settings.btn_url
+assign button_style = block.settings.button_style
+
+
+assign block_width = block.settings.block_width
+assign border_radius = block.settings.border_radius
+assign content_max_width = block.settings.content_max_width
+assign content_alignment = block.settings.content_alignment
+
+assign block_padding_horizontal = block.settings.block_padding_horizontal
+assign block_padding_vertical = block.settings.block_padding_vertical
+assign color_scheme = block.settings.color_scheme
+assign bg_color = block.settings.bg_color
+assign alignment = block.settings.alignment
+
+assign add_icon = block.settings.add_icon
+assign icon_type = block.settings.icon_type
+assign icon_image = block.settings.icon_image
+assign icon_svg = block.settings.icon_svg
+assign icon_style = block.settings.icon_style
+assign icon_size = block.settings.icon_size
+
+
+
+
+%}
+
+{%  unless add_icon == false %}
+    {%  capture advisor_icon %}  
+
+        {% if icon_style == 'without_color' %}
+            <div class="icon_style ">
+                 {% if icon_type == 'svg' %}
+                     {{ icon_svg }}
+                {% elsif icon_type == 'image' %}
+                     {%  render 'media' media:icon_image %}
+                {% endif %}
+            </div>
+        {% elsif icon_style == 'with_color' %}
+            <div class="icon_style color_icon">
+                {% if icon_type == 'svg' %}
+                     {{ icon_svg }}
+                {% elsif icon_type == 'image' %}
+                     {%  render 'media' media:icon_image %}
+                {% endif %}
+            </div>
+        {% endif %}
+       
+        
+
+    {% endcapture %}
+{% endunless %}
+
+
+<div class="advisor_style color-{{ color_scheme }} gradient">
+
+    <div class="advisor_bg_style"></div>
+        
+        <div class="advisor_media">
+            {%  render 'media' media:media %}
+        {{ advisor_icon }}
+        </div>
+      
+    
+   <div class="advisor_content_style">
+     {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 
+    
+     {%  render 'btn', 
+        btn_text:btn_text, 
+        btn_url:btn_url, 
+        button_style:button_style
+    %} 
+   </div>
+
+    
+                
+</div>
+
+{%  style  %}
+#shopify-block-{{ block.id }}.block-advisor {
+    --block_width:calc({{block_width}} - var(--gap_horizontal)/2);
+    --border_radius: {{border_radius}}px;
+    --content_max_width: {{content_max_width}}px;
+    --block_padding_horizontal: {{block_padding_horizontal}}px;
+    --block_padding_vertical: {{block_padding_vertical}}px;
+    --bg_color:{{bg_color}};
+    --alignment:{{alignment}};
+    --content_alignment:{{content_alignment}};
+    --icon_size:{{icon_size}}px;
+}
+
+{% endstyle %}
+
+
+{% schema %}
+{
+  "name": "Media",
+  "class": "media-content",
+  "tag": "div",
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "media",
+        "label": "Image"
+    },
+    
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>"
+    },
+    {
+        "type": "checkbox",
+        "id": "add_icon",
+        "label": "Add Icon",
+        "default":false
+    },
+    {
+        "type": "select",
+        "options": [
+            { "value": "svg", "label": "Svg"},
+             { "value": "image", "label": "Image"}
+        ],
+        "id": "icon_type",
+        "label": "Select Svg or Image",
+        "default":"image",
+        "visible_if": "{{ block.settings.add_icon == true }}"
+    },
+    {
+        "type": "image_picker",
+        "id": "icon_image",
+        "label": "Add Image Icon",
+        "visible_if": "{{ block.settings.icon_type == 'image' and block.settings.add_icon == true }}"
+    },
+    {
+        "type": "html",
+        "id": "icon_svg",
+        "label": "Add Svg Code",
+        "visible_if": "{{ block.settings.icon_type == 'svg' and block.settings.add_icon == true }}"
+    },
+    {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text",
+        "default":"BEKIJK VACATURE"
+    },
+    {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button Link"
+    },
+     {
+        "type": "header",
+        "content": "style"
+    },
+    {
+        "type": "select",
+        "label": "Icon Style",
+        "id": "icon_style",
+        "default":"without_color",
+        "options": [
+            { "value": "with_color", "label": "With Color"},
+            { "value": "without_color", "label": "Without Color"}
+        ],
+         "visible_if": "{{ block.settings.add_icon == true }}"
+    },
+    {
+        "type": "range",
+        "id": "icon_size",
+        "label": "Icon Size",
+        "min": 30,
+        "max": 200,
+        "default":50,
+        "step": 2,
+        "unit": "px",
+        "visible_if": "{{ block.settings.add_icon == true }}"
+    },
+    {
+        "type": "select",
+        "id": "button_style",
+        "label": "Button Style",
+        "options": [
+            { "value": "filled","label": "Filled" },
+            { "value": "outline","label": "Outline" },
+            { "value": "linked","label": "Linked" }
+            
+
+        ]
+    },
+   
+    {
+        "type": "select",
+        "id": "block_width",
+        "label": "Block width",
+        "options": [
+            { "value": "20%","label": "20%" },
+            { "value": "25%","label": "25%" },
+            { "value": "33.33%","label": "33.33%" },
+            { "value": "40%","label": "40%" },
+            { "value": "50%","label": "50%" },
+            { "value": "60%","label": "60%" },
+            { "value": "66.66%","label": "66.66%" },
+            { "value": "75%","label": "75%" },
+            { "value": "80%","label": "80%" },
+            { "value": "100%","label": "100%" }
+            
+
+        ]
+    },
+     {
+        "type": "select",
+        "default":"center",
+        "id": "alignment",
+        "label": "Block Alignment",
+        "options": [
+            {"value": "flex-start", "label":"Start"},
+            {"value": "center", "label":"Center"},
+            {"value": "flex-end", "label":"End"},
+            ]
+
+    },
+     {
+        "type": "range",
+        "id": "border_radius",
+        "label": "Image Border radius",
+        "max": 300,
+        "min": 0,
+        "step": 5,
+        "default":25,
+        "unit": "px"
+    },
+      {
+        "type": "range",
+        "id": "block_padding_horizontal",
+        "label": "Block Padding Horizontal",
+        "max": 150,
+        "min": 0,
+        "step": 5,
+        "default":30,
+        "unit": "px"
+    },
+     {
+        "type": "range",
+        "id": "block_padding_vertical",
+        "label": "Block Padding Vertical",
+        "max": 150,
+        "min": 0,
+        "step": 5,
+        "default":30,
+        "unit": "px"
+    },
+    {
+    "type": "color",
+    "id": "bg_color",
+    "label": "Block Background color",
+    "default": "#06123D"
+    },
+    {
+        "type": "range",
+        "id": "content_max_width",
+        "label": "Content Max width",
+        "max": 900,
+        "min":200,
+        "step": 10,
+        "default":500,
+        "unit": "px"
+    },
+      {
+        "type": "select",
+        "default":"left",
+        "id": "content_alignment",
+        "label": "Block Alignment",
+        "options": [
+            {"value": "left", "label":"Start"},
+            {"value": "center", "label":"Center"},
+            {"value": "right", "label":"End"},
+            ]
+
+    },
+     
+   
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "settings.color_scheme",
+        "default": "scheme-1"
+    }
+   
+
+    ],
+  "presets": [
+    {
+      "name": "Media"
+    }
+  ]
+}
+{% endschema %}

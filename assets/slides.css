@@ -1,4 +1,47 @@
-    
+ 
+ .swiper-default {
+  display: flex;
+  gap:20px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ }
+ 
+ 
+ .swiper-top-right,.swiper-top-center,  .swiper-top-left,
+.swiper-bottom-right,.swiper-bottom-center,  .swiper-bottom-left {
+  display: flex;
+  gap:20px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+.swiper-pagination {
+  width:auto;
+}
+  .swiper-button-next, .swiper-button-prev {
+  position: static;
+  margin-top:0;
+  }
+  .swiper-button-next {}
+   .swiper-button-prev {}
+
+
+ }
+
+ .swiper-bottom-right,
+ .swiper-top-right {
+  justify-content: flex-end;
+ }
+.swiper-bottom-center,
+.swiper-top-center {
+  justify-content: center;
+ } 
+ 
+  .swiper-bottom-left,
+  .swiper-top-left  {
+  justify-content: flex-start;
+ } 
      
     
     
@@ -6,7 +49,7 @@
         position: relative;
           border-radius: var(--radius);
           overflow: hidden;  
-          img {
+          img, > svg {
             aspect-ratio: var( --aspect_ratio);
             object-fit: cover;
           display: block;
