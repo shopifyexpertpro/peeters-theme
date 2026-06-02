@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: var(--alignment);
     flex-wrap: wrap;
     gap:var(--gap_vertical) var(--gap_horizontal);
+    justify-content: var(--block_horizontal_align);
 }
 
 strong {
@@ -73,6 +74,12 @@ font-size:85px;
     border: 0;
     text-decoration: none;
     overflow: hidden;
+     @media screen and (max-width:767px) {
+      padding: 15px 20px;
+      display: flex !important;
+      justify-content: center;
+      gap:5px;
+    }
 }
 .btn {
 position: relative;
@@ -84,6 +91,11 @@ display: inline-block;
 opacity: 0;
 margin-left: -20px;
 transition-duration: .4s;
+@media screen and (max-width:767px) {
+      opacity: 1;
+      margin-left:0px;
+      
+    }
 }
 .btn:hover svg {
 opacity: 1;
@@ -172,4 +184,5 @@ font-size:55px;
 }
 
 }
+
 

@@ -11,6 +11,7 @@ assign button_style = block.settings.button_style
 
 
 assign block_width = block.settings.block_width
+assign block_width_phone = block.settings.block_width_phone
 assign title_max_width = block.settings.title_max_width
 assign title_size = block.settings.title_size
 assign title_margin_bottom = block.settings.title_margin_bottom
@@ -43,6 +44,7 @@ assign color_scheme = block.settings.color_scheme
 #shopify-block-{{ block.id }}.block-title {
     /* --block_width: {{block_width}}; */
     --block_width:calc({{block_width}} - var(--gap_horizontal)/2);
+    --block_width_phone:{{block_width_phone}};
     --title_max_width: {{title_max_width}}px;
     --title_margin_bottom:{{title_margin_bottom}}px;
     --content_max_width: {{content_max_width}}px;
@@ -121,7 +123,8 @@ assign color_scheme = block.settings.color_scheme
             { "value": "100%","label": "100%" }
             
 
-        ]
+        ],
+        "default":"50%"
     },
     
       {
@@ -192,6 +195,30 @@ assign color_scheme = block.settings.color_scheme
         "id": "color_scheme",
         "label": "settings.color_scheme",
         "default": "scheme-1"
+    },
+    {
+        "type": "header",
+        "content": "Mobile Responsive"
+    },
+     {
+        "type": "select",
+        "id": "block_width_phone",
+        "label": "Block width Phone",
+        "options": [
+            { "value": "20%","label": "20%" },
+            { "value": "25%","label": "25%" },
+            { "value": "33.33%","label": "33.33%" },
+            { "value": "40%","label": "40%" },
+            { "value": "50%","label": "50%" },
+            { "value": "60%","label": "60%" },
+            { "value": "66.66%","label": "66.66%" },
+            { "value": "75%","label": "75%" },
+            { "value": "80%","label": "80%" },
+            { "value": "100%","label": "100%" }
+            
+
+        ],
+        "default":"100%"
     }
    
 
@@ -199,7 +226,9 @@ assign color_scheme = block.settings.color_scheme
   "presets": [
     {
       "name": "Title"
+      
     }
+       
   ]
 }
 {% endschema %}

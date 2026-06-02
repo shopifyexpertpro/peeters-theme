@@ -26,6 +26,16 @@
     background: var(--bg_color);
 
 }
+.block-advisor .advisor_bg_style::after {
+    content: "";
+    background-image:url(https://cdn.shopify.com/s/files/1/0987/6566/8665/files/blur.png?v=1780370351);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
 .block-advisor .advisor_style > *:not(.advisor_bg_style) {
     position: relative;
     z-index: 1;

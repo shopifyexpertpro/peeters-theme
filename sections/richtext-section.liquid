@@ -6,6 +6,7 @@
 {%  liquid 
     assign layout_max_width = section.settings.layout_max_width
     assign block_align = section.settings.block_align
+    assign block_horizontal_align = section.settings.block_horizontal_align
     assign padding_top = section.settings.padding_top
     assign padding_bottom = section.settings.padding_bottom
 
@@ -19,14 +20,18 @@
 
     assign gap_horizontal = section.settings.gap_horizontal
     assign gap_vertical = section.settings.gap_vertical
-   
 
+    assign flex_direction = section.settings.flex_direction
+    assign padding_top_phone = section.settings.padding_top_phone
+    assign padding_bottom_phone = section.settings.padding_bottom_phone
+   
 
 %} 
 {%  style  %}
 #shopify-section-{{ section.id }} {
 --max-width:{{layout_max_width}};
 --block_align:{{block_align}};
+--block_horizontal_align:{{block_horizontal_align}};
 --padding_top:{{padding_top}}px;
 --background_color:{{background_color}};
 --padding_bottom:{{padding_bottom}}px;
@@ -36,10 +41,12 @@
 --radius_bottom_right:{{radius_bottom_right}}px;
 
 
---gap_horizontal:{{gap_horizontal}}px;
---gap_vertical:{{gap_vertical}}px;
+--flex_direction:{{flex_direction}};
+--padding_top_phone:{{padding_top_phone}}px;
+--padding_bottom_phone:{{padding_bottom_phone}}px;
 
 background-color: var(--background_color);
+position:relative;
 
 
 }
@@ -115,6 +122,30 @@ background-color: var(--background_color);
         {
           "value": "flex-end",
           "label": "Bottom"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "block_horizontal_align",
+      "label": "Horizontal Alignment",
+      "default": "flex-start",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        },
+        {
+          "value": "space-between",
+          "label": "Space Between"
         }
       ]
     },
@@ -201,7 +232,47 @@ background-color: var(--background_color);
       "step": 5,
       "default": 0,
       "unit": "px"
-    }
+    },
+    {
+      "type": "header",
+      "content": "Mobile Responsive"
+    },
+    {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "Block Direction",
+      "options": [
+        {"value": "row" , "label": "Row"},
+        {"value": "row-reverse" , "label": "Row Reverse"},
+        {"value": "column" , "label": "Column"},
+        {"value": "column-reverse" , "label": "Column Reverse"},
+        
+
+      ],
+      "default": "column"
+      
+      
+    },
+     {
+      "type": "range",
+      "id": "padding_top_phone",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_phone",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "default":50,
+      "unit": "px"
+    },
   ],
   "disabled_on": {
     "groups": ["header", "footer"]
