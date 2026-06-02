@@ -629,6 +629,91 @@
         "padding_top_phone": 300,
         "padding_bottom_phone": 50
       }
+    },
+    "bicycles_section_JeeG7J": {
+      "type": "bicycles-section",
+      "blocks": {
+        "title_t3dLJ7": {
+          "type": "title",
+          "name": "Title",
+          "settings": {
+            "sub_title": "sub title",
+            "title": "Single Title",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "block_width": "50%",
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "title_max_width": 500,
+            "content_max_width": 500,
+            "title_size": "large",
+            "title_margin_bottom": 30,
+            "color_scheme": "",
+            "block_width_phone": "100%"
+          },
+          "blocks": {}
+        },
+        "slides_znfi6n": {
+          "type": "slides",
+          "name": "Slides",
+          "settings": {
+            "media_size": "auto",
+            "radius": 20,
+            "overlay": true,
+            "navigation": true,
+            "pagenation": true,
+            "fullwidth": true,
+            "nav_position": "swiper-default",
+            "gap": 30,
+            "slide_per_row": 4,
+            "is_partile": true,
+            "partial": 2,
+            "gap_phone": 30,
+            "slide_per_row_phone": 1,
+            "is_partile_phone": true,
+            "partial_phone": 2
+          },
+          "blocks": {
+            "review_fb9Amh": {
+              "type": "_review",
+              "name": "Reviews",
+              "settings": {
+                "name": "Benjamin Maaslans",
+                "review": "2 weken geleden binnen gelopen om me te laten informeren over een elektrische fiets. Na een prettig geprek en deskundig advies een offerte mee gekregen. Vorige week de koop gesloten en vandaag de fiets met alle accessoires erop gemonteerd opgehaald. No nonsens verkoper met kennis van zaken. (Robin) Tot zover zeer tevreden. Er zitten meerdere beurten in het servicepakket dus ik ben benieuwd.",
+                "star_rating": 5,
+                "color_scheme": "scheme-2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "review_fb9Amh"
+          ]
+        }
+      },
+      "block_order": [
+        "title_t3dLJ7",
+        "slides_znfi6n"
+      ],
+      "name": "Bicycles Slider",
+      "settings": {
+        "layout_max_width": "1603px",
+        "background_color": "#06123D",
+        "color_scheme": "",
+        "block_align": "center",
+        "padding_top": 10,
+        "padding_bottom": 100,
+        "gap_horizontal": 30,
+        "gap_vertical": 30,
+        "radius_top_left": 0,
+        "radius_top_right": 0,
+        "radius_bottom_left": 250,
+        "radius_bottom_right": 0,
+        "padding_top_phone": 50,
+        "padding_bottom_phone": 50
+      }
     }
   },
   "order": [
@@ -637,6 +722,7 @@
     "featured_slider_qDYdph",
     "advisor_section_MADQAU",
     "bicycles_section_RRDTXh",
-    "richtext_section_QfjPJy"
+    "richtext_section_QfjPJy",
+    "bicycles_section_JeeG7J"
   ]
 }
