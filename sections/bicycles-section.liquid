@@ -19,6 +19,9 @@
 
     assign gap_horizontal = section.settings.gap_horizontal
     assign gap_vertical = section.settings.gap_vertical
+
+    assign padding_top_phone = section.settings.padding_top_phone
+    assign padding_bottom_phone = section.settings.padding_bottom_phone
    
 
 
@@ -34,7 +37,8 @@
 --radius_top_right:{{radius_top_right}}px;
 --radius_bottom_left:{{radius_bottom_left}}px;
 --radius_bottom_right:{{radius_bottom_right}}px;
-
+--padding_top_phone:{{padding_top_phone}}px;
+--padding_bottom_phone:{{padding_bottom_phone}}px;
 
 --gap_horizontal:{{gap_horizontal}}px;
 --gap_vertical:{{gap_vertical}}px;
@@ -197,6 +201,31 @@ background-color: var(--background_color);
       "max": 500,
       "step": 5,
       "default": 0,
+      "unit": "px"
+    },
+        {
+      "type": "header",
+      "content": "Mobile Responsive"
+    },
+    
+     {
+      "type": "range",
+      "id": "padding_top_phone",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_phone",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "default":50,
       "unit": "px"
     }
   ],

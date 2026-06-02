@@ -3,6 +3,11 @@
     flex-basis:var(--block_width);
     max-width:var(--block_width);
     height: stretch;
+     @media screen and (max-width:767px) {
+       flex-basis:var(--block_width_phone);
+        max-width:var(--block_width_phone); 
+     
+    }
 
 }
 

@@ -18,5 +18,5 @@ git push origin main
 
 
 git add .
-git commit -m "update tyle"
+git commit -m "update ner tyle"
 git push origin main

@@ -24,6 +24,7 @@ assign position = block.settings.position
 assign horizontal_position = block.settings.horizontal_position
 assign transformY = block.settings.transformY
 assign transformY_phone = block.settings.transformY_phone
+assign vertical_position = block.settings.vertical_position
 
 
 
@@ -69,6 +70,14 @@ assign transformY_phone = block.settings.transformY_phone
         --right:0; 
         {% endif %}
         
+         {%  if vertical_position == 'top' %} 
+            --top:0;
+            --bottom:auto;
+        {%  else %}
+        --top:auto;
+        --bottom:0; 
+        {% endif %}
+
         --transformY:translateY({{transformY}}px); 
         --transformY_phone:translateY({{transformY_phone}}px); 
     {% endunless %}
@@ -250,6 +259,7 @@ assign transformY_phone = block.settings.transformY_phone
             { "value": "66.66%","label": "66.66%" },
             { "value": "75%","label": "75%" },
             { "value": "80%","label": "80%" },
+            { "value": "90%","label": "90%" },
             { "value": "100%","label": "100%" }
             
 
@@ -265,6 +275,17 @@ assign transformY_phone = block.settings.transformY_phone
         "step": 10,
         "default": 0,
         "unit": "px",
+        "visible_if": "{{ block.settings.position == true }}"
+    },
+     {
+        "type": "select",
+        "id": "vertical_position",
+        "label": "Vertical Position",
+        "default":"top",
+        "options": [
+            { "value": "top", "label": "Top"},
+            { "value": "bottom", "label": "Bottom"}
+        ],
         "visible_if": "{{ block.settings.position == true }}"
     }
     

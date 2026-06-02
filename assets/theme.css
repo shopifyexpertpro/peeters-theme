@@ -50,17 +50,33 @@ font-size:32px;
 font-size:44px;
 }
 
-.title_extraextralarge {
+.title_extralarge {
 font-size:65px;
 }
 
 .title_extraextralarge {
 font-size:85px;
 }
-@media(min-width:768px) {
+@media(min-width:767px) {
 .only-phone {
   display: none;
-} 
+}
+
+}
+
+@media screen and (max-width: 767px) {
+ 
+  .title_extraextralarge {
+    font-size: 55px;
+  }
+
+  .title_extralarge {
+    font-size: 45px;
+  }
+
+  .title_large {
+    font-size: 40px;
+  }
 }
 .btn {
     color: rgb(var(--color-button-text));

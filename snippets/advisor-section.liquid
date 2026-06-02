@@ -9,6 +9,10 @@
     assign gap_vertical = section.settings.gap_vertical
     assign alignment = section.settings.alignment
 
+    assign flex_direction = section.settings.flex_direction
+    assign padding_top_phone = section.settings.padding_top_phone
+    assign padding_bottom_phone = section.settings.padding_bottom_phone
+
 
 %} 
 {%  style  %}
@@ -18,6 +22,10 @@
 --gap_horizontal:{{gap_horizontal}}px;
 --gap_vertical:{{gap_vertical}}px;
 --alignment:{{alignment}}
+
+--flex_direction:{{flex_direction}};
+--padding_top_phone:{{padding_top_phone}}px;
+--padding_bottom_phone:{{padding_bottom_phone}}px;
 
 
 

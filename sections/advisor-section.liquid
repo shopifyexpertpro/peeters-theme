@@ -86,8 +86,48 @@
                 "step": 5,
                 "default":20,
                 "unit": "px"
-            }
-        ],
+            },
+            {
+      "type": "header",
+      "content": "Mobile Responsive"
+    },
+    {
+      "type": "select",
+      "id": "flex_direction",
+      "label": "Block Direction",
+      "options": [
+        {"value": "row" , "label": "Row"},
+        {"value": "row-reverse" , "label": "Row Reverse"},
+        {"value": "column" , "label": "Column"},
+        {"value": "column-reverse" , "label": "Column Reverse"},
+        
+
+      ],
+      "default": "column"
+      
+      
+        },
+        {
+        "type": "range",
+        "id": "padding_top_phone",
+        "label": "Padding Top",
+        "min": 0,
+        "max": 500,
+        "step": 5,
+        "default": 50,
+        "unit": "px"
+        },
+        {
+        "type": "range",
+        "id": "padding_bottom_phone",
+        "label": "Padding Bottom",
+        "min": 0,
+        "max": 500,
+        "step": 5,
+        "default":50,
+        "unit": "px"
+        }
+            ],
         "presets": [
             {
             "name": "Advisor Section"
