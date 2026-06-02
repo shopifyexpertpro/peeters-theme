@@ -564,7 +564,7 @@
           "name": "Title",
           "settings": {
             "sub_title": "sub title",
-            "title": "Single Title",
+            "title": "Tweedehands fietsen",
             "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
             "btn_text": "BEKIJK VACATURE",
             "btn_url": "",
@@ -574,7 +574,7 @@
             "block_padding_vertical": 10,
             "title_max_width": 500,
             "content_max_width": 500,
-            "title_size": "large",
+            "title_size": "extralarge",
             "title_margin_bottom": 30,
             "color_scheme": "",
             "block_width_phone": "100%"
