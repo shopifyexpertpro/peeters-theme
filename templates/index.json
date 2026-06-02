@@ -329,7 +329,8 @@
             "content_max_width": 500,
             "title_size": "large",
             "title_margin_bottom": 30,
-            "color_scheme": ""
+            "color_scheme": "",
+            "block_width_phone": "100%"
           },
           "blocks": {}
         },
@@ -345,7 +346,8 @@
             "block_padding_horizontal": 30,
             "block_padding_vertical": 30,
             "content_max_width": 500,
-            "color_scheme": ""
+            "color_scheme": "",
+            "block_width_phone": "100%"
           },
           "blocks": {}
         },
@@ -372,7 +374,8 @@
             "bg_color": "#06123d",
             "content_max_width": 500,
             "content_alignment": "left",
-            "color_scheme": ""
+            "color_scheme": "",
+            "block_width_phone": "100%"
           },
           "blocks": {}
         },
@@ -399,7 +402,8 @@
             "bg_color": "#06123d",
             "content_max_width": 500,
             "content_alignment": "left",
-            "color_scheme": ""
+            "color_scheme": "",
+            "block_width_phone": "100%"
           },
           "blocks": {}
         }
@@ -418,7 +422,10 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "gap_horizontal": 20,
-        "gap_vertical": 20
+        "gap_vertical": 20,
+        "flex_direction": "column",
+        "padding_top_phone": 50,
+        "padding_bottom_phone": 50
       }
     },
     "bicycles_section_RRDTXh": {
@@ -441,7 +448,8 @@
             "content_max_width": 500,
             "title_size": "large",
             "title_margin_bottom": 30,
-            "color_scheme": ""
+            "color_scheme": "",
+            "block_width_phone": "100%"
           },
           "blocks": {}
         },
@@ -452,6 +460,10 @@
             "media_size": "auto",
             "radius": 20,
             "overlay": true,
+            "navigation": true,
+            "pagenation": true,
+            "fullwidth": true,
+            "nav_position": "swiper-default",
             "gap": 30,
             "slide_per_row": 4,
             "is_partile": true,
@@ -539,7 +551,83 @@
         "radius_top_left": 0,
         "radius_top_right": 0,
         "radius_bottom_left": 250,
-        "radius_bottom_right": 0
+        "radius_bottom_right": 0,
+        "padding_top_phone": 50,
+        "padding_bottom_phone": 50
+      }
+    },
+    "richtext_section_QfjPJy": {
+      "type": "richtext-section",
+      "blocks": {
+        "title_NtW4RV": {
+          "type": "title",
+          "name": "Title",
+          "settings": {
+            "sub_title": "sub title",
+            "title": "Single Title",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "block_width": "50%",
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "title_max_width": 500,
+            "content_max_width": 500,
+            "title_size": "large",
+            "title_margin_bottom": 30,
+            "color_scheme": "",
+            "block_width_phone": "100%"
+          },
+          "blocks": {}
+        },
+        "media_kQaRK6": {
+          "type": "media",
+          "name": "Media",
+          "settings": {
+            "media": "shopify://shop_images/Peeters_Tweewielers_sRGB-18_2_ac37e506-d578-4d1f-9120-ee0991a494e4.png",
+            "btn_url": "",
+            "block_width": "20%",
+            "block_padding_horizontal": 30,
+            "block_padding_vertical": 30,
+            "media_max_width": 500,
+            "color_scheme": "",
+            "radius_top_left": 0,
+            "radius_top_right": 0,
+            "radius_bottom_left": 250,
+            "radius_bottom_right": 0,
+            "position": true,
+            "horizontal_position": "right",
+            "transformY": 0,
+            "block_width_phone": "100%",
+            "transformY_phone": 0,
+            "vertical_position": "top"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "title_NtW4RV",
+        "media_kQaRK6"
+      ],
+      "name": "Richtext Section",
+      "settings": {
+        "layout_max_width": "1603px",
+        "background_color": "#06123D",
+        "color_scheme": "",
+        "block_align": "center",
+        "block_horizontal_align": "flex-start",
+        "padding_top": 10,
+        "padding_bottom": 100,
+        "gap_horizontal": 30,
+        "gap_vertical": 30,
+        "radius_top_left": 0,
+        "radius_top_right": 0,
+        "radius_bottom_left": 250,
+        "radius_bottom_right": 0,
+        "flex_direction": "column",
+        "padding_top_phone": 50,
+        "padding_bottom_phone": 50
       }
     }
   },
@@ -548,6 +636,7 @@
     "scrolling_logo_kqrntT",
     "featured_slider_qDYdph",
     "advisor_section_MADQAU",
-    "bicycles_section_RRDTXh"
+    "bicycles_section_RRDTXh",
+    "richtext_section_QfjPJy"
   ]
 }
