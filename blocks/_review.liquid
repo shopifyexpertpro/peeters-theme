@@ -2,18 +2,32 @@
 {%  liquid 
 assign name = block.settings.name
 assign review = block.settings.review
-assign star_rating = block.settings.star_rating
+assign rating = block.settings.star_rating
 assign color_scheme = block.settings.color_scheme
 
 
 %}
 
+{%  style  %} 
+.review .reviews {
+color:#EDD500;
+
+}
+
+.review .reviews svg {
+width:20px;
+height:20px;
+
+}
+{% endstyle %}
 
 
 <div class="review color-{{ color_scheme }} gradient">
     <div class="reviewer">
         <h3>{{ name }}</h3>
-        {{ star_rating }}
+       <div class="reviews"> 
+            {% render 'reviews-icons', rate: rating %}
+       </div>
     </div>
     {{ review }}
 </div>

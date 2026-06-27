@@ -1,4 +1,3 @@
-{% comment %} {{ 'title.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 
 {% liquid 
@@ -21,21 +20,36 @@ assign block_padding_vertical = block.settings.block_padding_vertical
 assign color_scheme = block.settings.color_scheme
 
 
+assign logo = block.settings.logo
+assign reviews_text = block.settings.reviews_text
+assign reviews_rating = block.settings.reviews_rating
+
+
 %}
 
 
 
 
 <div class="color-{{ color_scheme }} gradient title_style">
-    {%  unless sub_title == blank %} <h5>{{ sub_title }}</h5>  {% endunless %} 
-    {%  unless title == blank   %} <h2 class="title_{{title_size}}">{{ title }}</h2>  {% endunless %}
-    {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 
+    <div class="title_content_left">
+        {%  unless sub_title == blank %} <h5>{{ sub_title }}</h5>  {% endunless %} 
+         {%  unless title == blank   %} <h2 class="title_{{title_size}}">{{ title }}</h2>  {% endunless %}
+         {%  unless content == blank  %} <div class="content">{{ content }}</div>  {% endunless %} 
     
-    {%  render 'btn', 
-        btn_text:btn_text, 
-        btn_url:btn_url, 
-        button_style:button_style
-    %} 
+         {%  render 'btn', 
+                btn_text:btn_text, 
+                btn_url:btn_url, 
+                button_style:button_style
+            %} 
+
+    </div>
+    <div class="title_content_right">
+            <div class="google_review">
+                {{ logo |  image_url: width:500 |  image_tag  }}
+                <h3>{{ reviews_rating }}</h3>
+                <p>{{ reviews_text }}</p>
+            </div>
+    </div>
 
                 
 </div>
@@ -57,8 +71,8 @@ assign color_scheme = block.settings.color_scheme
 
 {% schema %}
 {
-  "name": "Title",
-  "class": "block-title",
+  "name": "Review Title",
+  "class": "block-title review-title",
   "tag": "div",
   "settings": [
     {
@@ -101,6 +115,31 @@ assign color_scheme = block.settings.color_scheme
             
 
         ]
+    },
+    {
+        "type": "header",
+        "content": "Google Reviews"
+    },
+    {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Google Logo"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "reviews_text",
+        "label": "Reviews Text",
+        "default": "Gebaseerd op 175+ reviews"
+    },
+    {
+      "type": "range",
+      "id": "reviews_rating",
+      "label": "Reviews Rating",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 4.5,
+      "unit": "px"
     },
     {
         "type": "header",
@@ -225,7 +264,7 @@ assign color_scheme = block.settings.color_scheme
     ],
   "presets": [
     {
-      "name": "Title"
+      "name": "Reviews Title"
       
     }
        
