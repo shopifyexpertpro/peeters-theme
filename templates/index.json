@@ -663,7 +663,7 @@
             "radius": 20,
             "overlay": true,
             "navigation": true,
-            "pagenation": true,
+            "pagenation": false,
             "fullwidth": false,
             "nav_position": "swiper-top-right",
             "gap": 30,
@@ -748,7 +748,7 @@
       "name": "Bicycles Slider",
       "settings": {
         "layout_max_width": "1603px",
-        "background_color": "#06123D",
+        "background_color": "#06123d",
         "color_scheme": "",
         "block_align": "center",
         "padding_top": 10,
