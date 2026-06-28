@@ -762,6 +762,130 @@
         "padding_top_phone": 50,
         "padding_bottom_phone": 50
       }
+    },
+    "reviews_section_rRc7Bx": {
+      "type": "reviews-section",
+      "blocks": {
+        "reviews_title_KY8J4V": {
+          "type": "reviews-title",
+          "name": "Reviews Title",
+          "settings": {
+            "sub_title": "REVIEWS",
+            "title": "De ervaringen van onze klanten",
+            "content": "",
+            "btn_text": "BEKIJK VACATURE",
+            "btn_url": "",
+            "button_style": "filled",
+            "logo": "shopify://shop_images/75783151e51a80754d25dd2afafdc58f77283a38.png",
+            "reviews_text": "Gebaseerd op <strong>175+ reviews</strong>",
+            "reviews_rating": 4.5,
+            "block_width": "100%",
+            "block_padding_horizontal": 0,
+            "block_padding_vertical": 0,
+            "title_max_width": 500,
+            "content_max_width": 500,
+            "title_size": "large",
+            "title_margin_bottom": 30,
+            "color_scheme": "",
+            "block_width_phone": "100%"
+          },
+          "blocks": {}
+        },
+        "slides_7WTneX": {
+          "type": "slides",
+          "name": "Slides",
+          "settings": {
+            "media_size": "auto",
+            "radius": 20,
+            "overlay": true,
+            "navigation": true,
+            "pagenation": false,
+            "fullwidth": false,
+            "nav_position": "swiper-top-right",
+            "gap": 30,
+            "slide_per_row": 3,
+            "is_partile": false,
+            "partial": 2,
+            "gap_phone": 30,
+            "slide_per_row_phone": 1,
+            "is_partile_phone": false,
+            "partial_phone": 2
+          },
+          "blocks": {
+            "review_4ihijk": {
+              "type": "_review",
+              "name": "Reviews",
+              "settings": {
+                "name": "Benjamin Maaslans",
+                "review": "2 weken geleden binnen gelopen om me te laten informeren over een elektrische fiets. Na een prettig geprek en deskundig advies een offerte mee gekregen. Vorige week de koop gesloten en vandaag de fiets met alle accessoires erop gemonteerd opgehaald. No nonsens verkoper met kennis van zaken. (Robin) Tot zover zeer tevreden. Er zitten meerdere beurten in het servicepakket dus ik ben benieuwd.",
+                "star_rating": 5,
+                "color_scheme": "scheme-2"
+              },
+              "blocks": {}
+            },
+            "review_MNhyGJ": {
+              "type": "_review",
+              "name": "Reviews",
+              "settings": {
+                "name": "Guy van Stralen",
+                "review": "Via internet een gebruikte fiets gevonden. gemaild en gebeld konden komen kijken. Fiets meteen klaar gemaakt en mochten  hem meteen meenemen. Top service en hele mooie fietsenzaak!",
+                "star_rating": 5,
+                "color_scheme": "scheme-2"
+              },
+              "blocks": {}
+            },
+            "review_NwfpTD": {
+              "type": "_review",
+              "name": "Reviews",
+              "settings": {
+                "name": "Roos Hendrikx",
+                "review": "Super fijn geholpen door Johan en zijn team! Goede uitleg en hele fijne service bij de aankoop van onze elektrische fietsen! Wij zijn er heel blij mee. Een echte aanrader! Nogmaals een dikke merci Peeters Bike Totaal Heel.",
+                "star_rating": 5,
+                "color_scheme": "scheme-2"
+              },
+              "blocks": {}
+            },
+            "review_PhM4Nh": {
+              "type": "_review",
+              "name": "Reviews",
+              "settings": {
+                "name": "Benjamin Maaslans",
+                "review": "2 weken geleden binnen gelopen om me te laten informeren over een elektrische fiets. Na een prettig geprek en deskundig advies een offerte mee gekregen. Vorige week de koop gesloten en vandaag de fiets met alle accessoires erop gemonteerd opgehaald. No nonsens verkoper met kennis van zaken. (Robin) Tot zover zeer tevreden. Er zitten meerdere beurten in het servicepakket dus ik ben benieuwd.",
+                "star_rating": 5,
+                "color_scheme": "scheme-2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "review_4ihijk",
+            "review_MNhyGJ",
+            "review_NwfpTD",
+            "review_PhM4Nh"
+          ]
+        }
+      },
+      "block_order": [
+        "reviews_title_KY8J4V",
+        "slides_7WTneX"
+      ],
+      "name": "Reviews Slider",
+      "settings": {
+        "layout_max_width": "1603px",
+        "background_color": "#06123D",
+        "color_scheme": "",
+        "block_align": "center",
+        "padding_top": 10,
+        "padding_bottom": 100,
+        "gap_horizontal": 30,
+        "gap_vertical": 30,
+        "radius_top_left": 0,
+        "radius_top_right": 0,
+        "radius_bottom_left": 250,
+        "radius_bottom_right": 0,
+        "padding_top_phone": 50,
+        "padding_bottom_phone": 50
+      }
     }
   },
   "order": [
@@ -771,6 +895,7 @@
     "advisor_section_MADQAU",
     "bicycles_section_RRDTXh",
     "richtext_section_QfjPJy",
-    "bicycles_section_fwGUir"
+    "bicycles_section_fwGUir",
+    "reviews_section_rRc7Bx"
   ]
 }
