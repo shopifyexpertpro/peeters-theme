@@ -43,9 +43,12 @@ assign reviews_rating = block.settings.reviews_rating
             %} 
 
     </div>
-    <div class="title_content_right">
+    <div class="google_review_block">
             <div class="google_review">
-                {{ logo |  image_url: width:500 |  image_tag  }}
+               {{ logo | image_url: width: 500 | image_tag:
+                    alt: shop.name,
+                    loading: 'lazy'
+                    }}
                 <h3>{{ reviews_rating }}</h3>
                 <p>{{ reviews_text }}</p>
             </div>
@@ -305,4 +308,55 @@ assign reviews_rating = block.settings.reviews_rating
    max-width: var(--content_max_width); 
 }
 
+.review-title .title_style {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .google_review_block {
+      .google_review{
+            display: flex;
+    align-items: center;
+    gap: 28px;
+    border: 3px solid #3C5358;
+    padding: 25px 30px;
+    border-radius: 25px;
+        img {
+            width:57px;
+            height:58px;
+        }
+        h3 {
+            
+            font-weight: 600;
+            font-size: 80px;
+            line-height: 120%;
+            letter-spacing: 0%;
+
+        }
+        p {
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 12px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            opacity:50%;
+            color:#fff;
+
+            strong {
+                opacity:100%;
+                color:#fff;
+            }
+        }
+      }  
+    }
+}
+
+@media (max-width:749px) {
+  .review-title .title_style {
+    flex-direction:column;
+    align-items: flex-start;
+}  
+}
 {% endstylesheet %}
