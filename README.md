@@ -11,7 +11,7 @@ npm install -g @shopify/cli@latest
 shopify theme check
 ```
 git add .
-git commit -m "update aslider reviews section"
+git commit -m "update best seller section"
 git pull origin main --rebase
 git push origin main
 
