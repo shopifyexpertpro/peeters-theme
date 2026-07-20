@@ -770,10 +770,55 @@
             "feature_03": "Bosch Purion\nLCD",
             "info_03": "DISPLAY"
           }
+        },
+        "bicycle_info_8piKKR": {
+          "type": "bicycle_info",
+          "settings": {
+            "image": "shopify://shop_images/952f2ecfb53294f32d106f8f3f7b30179fe47422.png",
+            "title": "RIH MOVENDA",
+            "link": "wielerkleding-actie-in-heel",
+            "feature_01": "Bosch Active\nLine Plus",
+            "info_01": "MOTOR",
+            "feature_02": "Bosch 400 Wh\ninbegrepen",
+            "info_02": "ACCU",
+            "feature_03": "Bosch Purion\nLCD",
+            "info_03": "DISPLAY"
+          }
+        },
+        "bicycle_info_TJz7i7": {
+          "type": "bicycle_info",
+          "settings": {
+            "image": "shopify://shop_images/952f2ecfb53294f32d106f8f3f7b30179fe47422.png",
+            "title": "RIH MOVENDA",
+            "link": "wielerkleding-actie-in-heel",
+            "feature_01": "Bosch Active\nLine Plus",
+            "info_01": "MOTOR",
+            "feature_02": "Bosch 400 Wh\ninbegrepen",
+            "info_02": "ACCU",
+            "feature_03": "Bosch Purion\nLCD",
+            "info_03": "DISPLAY"
+          }
+        },
+        "bicycle_info_BkqhVY": {
+          "type": "bicycle_info",
+          "settings": {
+            "image": "shopify://shop_images/952f2ecfb53294f32d106f8f3f7b30179fe47422.png",
+            "title": "RIH MOVENDA",
+            "link": "wielerkleding-actie-in-heel",
+            "feature_01": "Bosch Active\nLine Plus",
+            "info_01": "MOTOR",
+            "feature_02": "Bosch 400 Wh\ninbegrepen",
+            "info_02": "ACCU",
+            "feature_03": "Bosch Purion\nLCD",
+            "info_03": "DISPLAY"
+          }
         }
       },
       "block_order": [
-        "bicycle_info_hN83ND"
+        "bicycle_info_hN83ND",
+        "bicycle_info_8piKKR",
+        "bicycle_info_TJz7i7",
+        "bicycle_info_BkqhVY"
       ],
       "name": "Best Bicycle Slider",
       "settings": {
