@@ -739,7 +739,7 @@
       "name": "Reviews Slider",
       "settings": {
         "layout_max_width": "1603px",
-        "background_color": "#06123D",
+        "background_color": "#06123d",
         "color_scheme": "",
         "block_align": "center",
         "padding_top": 10,
@@ -753,6 +753,60 @@
         "padding_top_phone": 50,
         "padding_bottom_phone": 50
       }
+    },
+    "best_bicycle_slider_section_TVePcY": {
+      "type": "best-bicycle-slider-section",
+      "blocks": {
+        "bicycle_info_hN83ND": {
+          "type": "bicycle_info",
+          "settings": {
+            "image": "shopify://shop_images/952f2ecfb53294f32d106f8f3f7b30179fe47422.png",
+            "title": "RIH MOVENDA",
+            "link": "",
+            "feature_01": "Bosch Active\nLine Plus",
+            "info_01": "MOTOR",
+            "feature_02": "Bosch Active Line Plus",
+            "info_02": "MOTOR",
+            "feature_03": "Bosch Active Line Plus",
+            "info_03": "MOTOR"
+          }
+        }
+      },
+      "block_order": [
+        "bicycle_info_hN83ND"
+      ],
+      "name": "Best Bicycle Slider",
+      "settings": {
+        "layout_max_width": "1603px",
+        "background_color": "#06123D",
+        "color_scheme": "scheme-3cbf53ed-fc57-40df-a90e-38e022a5fd38",
+        "block_align": "center",
+        "padding_top": 100,
+        "padding_bottom": 100,
+        "gap_horizontal": 20,
+        "gap_vertical": 20,
+        "media_size": "auto",
+        "radius": 10,
+        "overlay": true,
+        "fullwidth": true,
+        "navigation": true,
+        "pagination": false,
+        "nav_position": "swiper-default",
+        "gap": 0,
+        "slide_per_row": 1,
+        "is_partial": false,
+        "partial": 2,
+        "gap_phone": 0,
+        "slide_per_row_phone": 1,
+        "is_partial_phone": false,
+        "partial_phone": 2,
+        "radius_top_left": 250,
+        "radius_top_right": 250,
+        "radius_bottom_left": 0,
+        "radius_bottom_right": 0,
+        "padding_top_phone": 50,
+        "padding_bottom_phone": 50
+      }
     }
   },
   "order": [
@@ -762,6 +816,7 @@
     "advisor_section_MADQAU",
     "bicycles_section_RRDTXh",
     "richtext_section_QfjPJy",
-    "reviews_section_rRc7Bx"
+    "reviews_section_rRc7Bx",
+    "best_bicycle_slider_section_TVePcY"
   ]
 }
